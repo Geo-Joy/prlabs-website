@@ -4,6 +4,7 @@ app.directive("aboutDirective", function() {
         templateUrl : "views/about.html"
     };
 });
+
 app.directive("productDirective", function() {
     return {
         templateUrl : "views/products.html"

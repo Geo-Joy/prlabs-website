@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900");
+@font-face { font-family: 'SEGOEUI'; src: url('fonts/segoe-ui/SEGOEUI.TTF'); } 
+@font-face { font-family: 'SEGOEUI'; font-weight: bold; src: url('fonts/segoe-ui/SEGOEUI.TTF');}
+
+
+body{
+	margin: 0 auto;
+	font-family: 'Montserrat';
+	/*font-family: 'Roboto', sans-serif;*/
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-weight: 400;
+}
+section{
+	margin: 5% 0% 5% 0%;
+}
+
+
+.primary-color{
+	color:#a22024;
+}
+.secondary-color{
+	color: #95989a;
+}
+
+h1{
+	font-family: 'SEGOEUI';
+  	  font-size: 36px;
+  	font-weight: 400;
+}
+hr{
+	width: 20%;
+	border-image: url(../img/line.png) 1 fill round;
+	margin: 0 auto;
+}
+
+h2{
+	
+	font-size: 30px;
+    line-height: 32px;
+    font-weight: 300;
+    color: #303638;
+    margin: 0 0 28px;
+}
+h3{
+	
+font-size: 16px;
+line-height: 30px;
+color: #727e85;
+font-weight: 200;
+}
+.text-center{
+	text-align: center;
+}
+.letter-spacing-4x{
+	letter-spacing: 4px;
+}
+.letter-spacing-2x{
+	letter-spacing: 2px;
+}
+.line-space-2x{
+	line-height: 28px;
+}
+
+.text-justify{
+	text-align: justify;
+}
+.margin-up-3{
+	margin-top: -3%;
+}
+.margin-up-1{
+	margin-top: -0.5%;
+}
+.product-img{
+	
+	width:100%;
+	/*margin-top: 20%*/
+	
+}
+.indicators{
+	text-align:center;
+	margin-top: 5%;
+    margin-bottom: 5%;
+    padding-left: 0px;
+}
+.indicators li{
+	list-style: none;
+	display:inline-block;
+	padding: 0% 2.2% 0% 2.2%;
+}
+
+.text-left{
+	text-align: left;
+}
+.capitalize{
+	text-transform: capitalize;
+}
+.full-width{
+	/*background-color: #f5f5f5;*/
+}
+
+
+
+
+
+

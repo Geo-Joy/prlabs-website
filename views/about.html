@@ -1,56 +1,23 @@
-<div class="container sec">
-	<section class="section" >
-	<div class="row headRow">
-		<h2 class="sectionHead text_primary">WHO WE ARE</h2>
-		<p class="section_text text_secondry post">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.and going through the cites of the word in classical literature, discovered the undoubtable source</p>
-	</div>
-	<div class="row">
-		<div >
-			<img src="img/logo/1.png" data-scroll-speed="5" id="rocketImg1">
-			<img src="img/logo/3.png" data-scroll-speed="1" id="rocketImg2">
-			<img src="img/logo/2.png" data-scroll-speed="3" id="rocketImg3">
-			<img src="img/logo/4.png" data-scroll-speed="6" id="rocketImg4">
-			<img src="img/logo/5.png" data-scroll-speed="8" id="rocketImg5">
-			<img src="img/logo/6.png" data-scroll-speed="2" id="rocketImg6">
-			<img src="img/logo/7.png" data-scroll-speed="4" id="rocketImg7">
-			<img src="img/logo/8.png" data-scroll-speed="3" id="rocketImg8">
-			<img src="img/logo/5.png" data-scroll-speed="2" id="rocketImg9">
-		</div>
-	</div>
-	<div class="row about">
-		<h4 class="sectionSubHead text_secondry ">WE RECOGNIZE</h4>
-		<p class="section_text1 text_secondry " style="position: relative;">That the key to customer<br/>Satisfaction and our long-term success depends<br/>On our ability to anticipate customer needs and develop flexible innovative<br/>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-	</div>
+<div class="container">
+<section>
+		<h1 class="text-center primary-color letter-spacing-4x " >WHO WE ARE</h1>
+		<hr/>
+	
+	<h3 class="text-center line-space-2x secondary-color">Not just another company specialising in creative media and IT, but, a team devising and putting creative solutions into motion with design and technology as its forte. We know what you need to take your brand to the next level, and help you achieve the goal beyond set possibilities. Our deep understanding of the requirements in today’s market adds tremendous value to every step of the process.</h3>
+	<!-- <div>
+		<img src="img/logo/1.png" data-scroll-speed="5" id="rocketImg1">
+		<img src="img/logo/3.png" data-scroll-speed="1" id="rocketImg2">
+		<img src="img/logo/2.png" data-scroll-speed="3" id="rocketImg3">
+		<img src="img/logo/4.png" data-scroll-speed="6" id="rocketImg4">
+		<img src="img/logo/5.png" data-scroll-speed="8" id="rocketImg5">
+		<img src="img/logo/6.png" data-scroll-speed="2" id="rocketImg6">
+		<img src="img/logo/7.png" data-scroll-speed="4" id="rocketImg7">
+		<img src="img/logo/8.png" data-scroll-speed="3" id="rocketImg8">
+		<img src="img/logo/5.png" data-scroll-speed="2" id="rocketImg9">
+	</div> -->
+	<img src="img/rocket_img.png" class="rocket-img" width="40%" style="margin-left: 29%">
+	<h3 class="text-center secondary-color letter-spacing-2x margin-up-3">We Recognize</h3>
+	<h3 class="text-center line-space-2x secondary-color margin-up-1">that the key to customer satisfaction and our long-term success depends on our ability to anticipate customer needs and develop flexible, innovative and creative solutions that provide our customers with a distinct competitive edge. Each step we take for you has equal amount of dedication and hard work put in. We have woven our dreams into a vision. A vision of a company with creations that bring about change. We endeavour to deliver! But, not just deliver, we strive for perfection and immerse ourselves deep into the work we perform.</h3>
 </section>
 </div>
 
-<script>
-	$.fn.moveIt = function(){
-	  	var $window = $(window);
-	  	var instances = [];
-	  
-	  	$(this).each(function(){
-	    	instances.push(new moveItItem($(this)));
-	  	});
-	  
-	  	window.onscroll = function(){
-	    	var scrollTop = $window.scrollTop();
-		    instances.forEach(function(inst){
-		      	inst.update(scrollTop - 700);
-		    });
-	  	}
-	}
-
-	var moveItItem = function(el){
-	  this.el = $(el);
-	  this.speed = parseInt(this.el.attr('data-scroll-speed'));
-	};
-
-	moveItItem.prototype.update = function(scrollTop){
-	  this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
-	};
-
-	$(function(){
-	  $('[data-scroll-speed]').moveIt();
-	});
-</script>

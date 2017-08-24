@@ -1,0 +1,156 @@
+<style type="text/css">
+    #mobileMenu{
+        display: none;
+    }
+</style>
+
+    <div class="mydiv sec1" ng-controller="homeCtrl" id="homep">
+    	<nav id="nav-1">
+            <div id="deskMenu">
+                <span class="navMenu" >
+                    <a class="link-1" href="#homep" >HOME</a>
+                    <a class="link-1" href="#aboutp" >ABOUT</a>
+                    <a class="link-1" href="#productp" >PROJECTS</a>
+                    <a class="link-1" href="#portfoliop" >PORTFOLIO</a>
+                    <a class="link-1" href="#servicep" >SERVICES</a>
+                    <a class="link-1" href="#contactp" >CONTACT</a>
+                    <i class="fa fa-times fa-2x " id="link-ham" onclick="closer()" aria-hidden="true" ></i>
+                </span>
+            </div>
+            <div id="mobileMenu">
+                    <li style="text-align: center;list-style: none;padding-top: 10px;padding-bottom: 10px"><a class="link-1" href="#homep" >Home</a></li>
+                    <li style="text-align: center;list-style: none;padding-top: 10px;padding-bottom: 10px"><a class="link-1" href="#aboutp" >About</a></li>
+                    <li style="text-align: center;list-style: none;padding-top: 10px;padding-bottom: 10px"><a class="link-1" href="#productp" >Projects</a></li>
+                    <li style="text-align: center;list-style: none;padding-top: 10px;padding-bottom: 10px"><a class="link-1" href="#portfoliop" >Portfolio</a></li>
+                    <li style="text-align: center;list-style: none;padding-top: 10px;padding-bottom: 10px"> <a class="link-1" href="#servicep" >Services</a></li>
+                    <li style="text-align: center;list-style: none;padding-top: 10px;padding-bottom: 10px"> <a class="link-1" href="#contactp" >Contact</a></li>
+                    <li style="text-align: center;list-style: none;padding-top: 10px;padding-bottom: 10px"> <i class="fa fa-times fa-2x " id="link-ham" onclick="closer()" aria-hidden="true" ></i></li>
+            </div>
+            <span>
+                <i class="fa fa-bars fa-2x barOp " id="link-ham" style="position: fixed;top:27px" onclick="menu()" aria-hidden="true" ></i>
+            </span>
+		</nav>
+        <div id="homebg">
+            <img data-src="img/home2.jpg" id="homebgImg" >
+            <img src="img/logo/home.gif" id="logoG">
+            <!-- <sapn id="tagLine"><span style="color:#b32024">INNOVATED</span> SOLUTION CARTED FOR <span style="color:#b32024">YOU</span></span> -->
+        </div>
+    </div>
+   	<about-directive class="mydiv" id="aboutp"></about-directive>
+	<lead-directive class="mydiv" id="leadp"></lead-directive>
+	<product-directive class="mydiv" id="productp"></product-directive>
+	<portfolio-directive class="mydiv" id="portfoliop"></portfolio-directive>
+	<services-directive class="mydiv" id="servicep"></services-directive>
+    <servicesa-directive class="mydiv"></servicesa-directive>
+    <servicesb-directive class="mydiv"></servicesb-directive>
+    <slider-directive class="mydiv" ></slider-directive>
+	<contact-directive class="mydiv" id="contactp"></contact-directive>
+    <footer-directive></footer-directive>
+
+
+<script>
+    $(document).ready(function(){
+        $(".navMenu").animate({
+            "margin-right": '-1000px'
+        });
+
+        var w = window.innerWidth;
+        if(w > 800){
+            $("#mobileMenu").hide();
+        }else{
+            $("#deskMenu").hide();
+        }
+    });
+    // $(window).scroll(function (event) {
+    //     $(".navMenu").animate({
+    //         "margin-right": '-1000px'
+    //     },1000);
+    //     document.getElementById('nav-1').style.backgroundColor = "transparent"; 
+    //     $(".barOp").css("visibility", "visible");
+    // });
+    function menu() {
+        var w = window.innerWidth;
+        if(w > 800){
+            $(".navMenu").animate({
+                "margin-right": '0px'
+            },1000) ;
+        }else{
+            $("#mobileMenu").show();
+        }
+        $(".barOp").hide();
+        document.getElementById('nav-1').style.backgroundColor = "rgba(255, 255, 255, 0.51)"; 
+    }
+    function closer(){
+        $(".navMenu").animate({
+            "margin-right": '-1000px'
+        },1000);
+        $("#mobileMenu").hide();
+        document.getElementById('nav-1').style.backgroundColor = "transparent"; 
+        $(".barOp").show(1000);
+    }
+</script>
+
+
+<script>
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
+
+<!-- <script>
+    $(document).ready(function () {
+         var w = window.innerWidth;
+        if(w > 800){
+            var divs = $('.mydiv');
+        var dir = 'up';
+        var div = 0;
+        $(document.body).on('DOMMouseScroll mousewheel', function (e) {
+            if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+                dir = 'down';
+            } else {
+                dir = 'up';
+            }
+           
+            div = -1;
+            divs.each(function(i){
+                if (div < 0 && ($(this).offset().top >= $(window).scrollTop())) {
+                    div = i;
+                }
+            });
+            if (dir == 'up' && div > 0) {
+                div--;
+            }
+            if (dir == 'down' && div < divs.length) {
+                div++;
+            }
+          
+            $('html,body').stop().animate({
+                scrollTop: divs.eq(div).offset().top
+            }, 1000);
+            return false;
+        });
+        $(window).resize(function () {
+            $('html,body').scrollTop(divs.eq(div).offset().top);
+        });
+        }else{
+           
+        }
+        
+    });
+</script> -->
+
+
+     
+
+

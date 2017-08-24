@@ -1,0 +1,53 @@
+<div class="container">
+	<section class="section">
+		<div class="row">
+			<h2 class="sectionHead text_primary post">CONTACT US</h2>
+		</div>
+		<div class="row" id="contactRow">
+			<div class="col-sm-12 col-md-7 post_left" id="maper">	
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.368691215223!2d77.59360311482823!3d12.883997790913398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1531dba3ffff%3A0xe15f8ee71c8158da!2sPaper+Rocket+Labs+Pvt.+Ltd.!5e0!3m2!1sen!2sin!4v1498651489742" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+			<div class="col-sm-12 col-md-5 post_right" id="mapright">
+				<div class="row">
+					<div class="col-sm-1 col-md-2 col-xs-2">
+						<img src="img/map-placeholder.png" class="mapIcon">
+					</div>
+					<div class="col-sm-11 col-md-10 col-xs-10">
+						<span  class="section_text2">E-1-19, KASHYAP, 21, 1st Cross Rd, Syndicate Bank Colony, Omkar Nagar, Arekere, Bengaluru, Karnataka 560076</span>
+					</div>
+				</div>
+				<div class="row" id="msgSec">
+					<div class="col-sm-1 col-md-2 col-xs-2">
+						<img src="img/message.png" class="mapIcon">
+					</div>
+					<div class="col-sm-11 col-md-10 col-xs-10" id="mail">
+						<span class="section_text2">mailus@prlabs.io</span>
+					</div>
+				</div>
+				<form name="EmailForm"  novalidate>
+					<div class="row contactInputs">
+						<input type="text" placeholder="Name" name="name" ng-model="mail.name" class="inputType" required>
+						<span ng-show="EmailForm.name.$error.required && !EmailForm.name.$pristine" style="color:red">Name is required!</span>
+
+					</div>
+					<div class="row contactInputs">
+						<input type="email" placeholder="Email" name="email" ng-model="mail.email" class="inputType" ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i" required>
+						<span ng-show="EmailForm.email.$error.pattern" style="color:red">Incorrect email address.</span>
+	                	<span ng-show="EmailForm.email.$error.required && !EmailForm.email.$pristine" style="color:red">Email is required!</span>
+					</div>
+					<div class="row contactInputs">
+						<input type="text" placeholder="Subject" name="subject" ng-model="mail.subject" class="inputType" required>
+						<span ng-show="EmailForm.subject.$error.required && !EmailForm.subject.$pristine" style="color:red">Subject is required!</span>
+					</div>
+					<div class="row contactInputs">
+						<textarea placeholder="Message" name="message" ng-model="mail.message" class="inputType" required></textarea>
+						<span ng-show="EmailForm.message.$error.required && !EmailForm.message.$pristine" style="color:red">Message is required!</span>
+					</div>
+					<div class="row contactInputs">
+						<button id="submit" ng-disabled="EmailForm.$invalid" ng-click="logEmail()">SUBMIT</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+</div>

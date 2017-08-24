@@ -10,6 +10,12 @@ app.directive("productDirective", function() {
         templateUrl : "views/products.html"
     };
 });
+
+app.directive("servicesDirective", function() {
+    return {
+        templateUrl : "views/service.html"
+    };
+});
 // app.directive("leadDirective", function() {
 //     return {
 //         templateUrl : "views/lead.html"

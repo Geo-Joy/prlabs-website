@@ -36,11 +36,11 @@ app.directive("productDirective", function() {
 //     };
 // });
 
-// app.directive("sliderDirective", function() {
-//     return {
-//         templateUrl : "views/slider.html"
-//     };
-// });
+app.directive("sliderDirective", function() {
+    return {
+        templateUrl : "views/slider.html"
+    };
+});
 // app.directive("contactDirective", function() {
 //     return {
 //         templateUrl : "views/contact.html"

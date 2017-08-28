@@ -1,70 +1,392 @@
-<!-- background-attachment: fixed; -->
-<div >
-	<!-- <div style="height: 95vh;width: 100%;background-image: url('./img/career.png');background-repeat: no-repeat;background-size:80% 80%;background-position: 50% 80%;  "> -->
-	    <h2 class="sectionHead text_primary" style="margin-top: 0px;padding-top:20px">CARRERS</h2>
-	    <img src="./img/career.png" style="width:80%;margin-left: 10%">
-	<!-- </div> -->
-	<div class="container">
-		<section class="section">
-			<div class="row">
-				<h2 class="sectionHead text_primary post">WE ARE HIRING</h2>
-			</div>
-	    	<div id="designer" class="col-sm-12 col-xs-12 " style="width: 100%;margin-top: 3%">
-				<div class="col-sm-6 col-xs-12 ">
-					<img src="img/career/desiner.png" class="center-block" width="50%">
-				</div>
-				<div class="col-sm-6  col-xs-12  " style="padding-left: 0px;padding-right: 0px;text-align: justify;">
-					<h4 class="productName text_primary ">CREATIVE DESIGNER</h4>
-					<p class="section_text2" style="margin-top:10px">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-					<p class="section_text2"> Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-					<div class="row joinRowLeft">
-						<div class='box btn'>APPLY</div>
-					</div>
-				</div>
-			</div>
+<style type="text/css">
+	.backgound-full-image{
+	}
+    
+           .team-grid {
+           text-align: center;
+           overflow: hidden;
+           }
+           .team-grid:not(:first-child) {
+           margin-top: 53px;
+           }
+           .team-member {
+           display: inline-block;
+           margin-right: -4px;
+           vertical-align: top;
+           margin-bottom: 30px;
+           text-align: left;
+           }
+           .team-member-inside {
+           /*max-width: 370px;*/
+           margin-left: auto;
+           margin-right: auto;
+           display: -webkit-box;
+           display: -webkit-flex;
+           display: -ms-flexbox;
+           display: flex;
+           -webkit-box-align: center;
+           -webkit-align-items: center;
+           -ms-flex-align: center;
+           align-items: center;
+           background: #f5f5f5;
+           background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#ffffff));
+           background: -webkit-linear-gradient(top, #f5f5f5 0%, #ffffff 100%);
+           background: -o-linear-gradient(top, #f5f5f5 0%, #ffffff 100%);
+           background: linear-gradient(to bottom, #f5f5f5 0%, #ffffff 100%);
+           background-size: 100% 100%;
+           background-position: 0 0;
+           background-repeat: no-repeat;
+           -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+           -webkit-transition: .3s;
+           -o-transition: .3s;
+           transition: .3s;
+           overflow: hidden;
+           }
+           .team-member:hover .team-member-inside {
+           background-position: 0 100%;
+           background-size: 100% 200%;
+           -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+           box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+           }
+           .team-member-photo {
+           margin-left: auto;
+           width: 190px;
+           min-width: 190px;
+           -webkit-transition: .3s;
+           -o-transition: .3s;
+           transition: .3s;
+           }
+           @media (min-width: 768px) {
+           .team-member-photo {
+           -webkit-transform: translateX(5px);
+           -ms-transform: translateX(5px);
+           transform: translateX(5px);
+           }
+           }
+           @media (min-width: 768px) {
+           .team-member:hover .team-member-photo {
+           -webkit-transform: translateX(-5px);
+           -ms-transform: translateX(-5px);
+           transform: translateX(-5px);
+           }
+           }
+           .team-member-info {
+           padding: 15px 0 15px 20px;
+           }
+           .team-member-info > *:not(: first-child) {
+           margin-top: 10px;
+           }
+           .team-member-name {
+           font-size: 20px;
+           line-height: 26px;
+           text-transform: uppercase;
+           word-spacing: 10000px;
+           }
+           .team-member-name a {
+           text-decoration: none;
+           color: #A22024
+           }
+           .team-member-name a:hover {
+           color: #D22024;
+           }
+           .team-member-position {
+           font-size: 16px;
+           line-height: 20px;
+           }
+           .team-member-position:not(:first-child) {
+           margin-top: 7px;
+           }
+           .team-member-link {
+           display: inline-block;
+           position: relative;
+           left: -20px;
+           height: 45px;
+           font-size: 16px;
+           line-height: 25px;
+           font-weight: 500;
+           padding: 10px 18px;
+           color: #70b615;
+           background-color: #181818;
+           text-transform: uppercase;
+           text-decoration: none;
+           -webkit-transition: .1s ease .1s;
+           -o-transition: .1s ease .1s;
+           transition: .1s ease .1s;
+           white-space: nowrap;
+           }
+           .team-member-link i.icon {
+           font-size: 12px;
+           margin-right: 10px;
+           }
+           .team-member-link:hover {
+           color: #fff;
+           background-color: #70b615;
+           text-decoration: none;
+           }
+           .team-member-link:not(:first-child) {
+           margin-top: 15px;
+           }
+           .team-member-social {
+           font-size: 16px;
+           line-height: 27px;
+           }
+           .team-member-social:not(:first-child) {
+           margin-top: 15px;
+           }
+           .team-member-social a {
+           margin-right: 10px;
+           text-decoration: none;
+           color: #232426;
+           }
+           .team-member-social a:hover {
+           text-decoration: none;
+           color: #A22024;
+           }
+           .team-member-text {
+           /*max-width: 370px;*/
+           margin-left: auto;
+           margin-right: auto;
+           position: relative;
+           padding: 35px 30px;
+           background-color: #f5f5f5;
+           color: #696969;
+           font-size: 16px;
+           line-height: 24px;
+           }
+           @media (max-width: 1679px) {
+           .team-member-text {
+           font-size: 15px;
+           line-height: 22px;
+           }
+           }
+           .team-member-text:before {
+           content: '';
+           position: absolute;
+           z-index: 1;
+           top: 0;
+           left: 0;
+           right: 0;
+           height: 3px;
+           background-image: -webkit-gradient(linear, left top, right top, from(#A22024), to(#f9df33));
+           background-image: -webkit-linear-gradient(left, #A22024, #f9df33);
+           background-image: -o-linear-gradient(left, #A22024, #f9df33);
+           background-image: linear-gradient(to right, #A22024, #f9df33);
+           background-size: 100% 100%;
+           }
+      
+</style>
 
-			<div id="videoEditor" class="col-sm-12 col-xs-12 " style="width: 100%;margin-top: 8%;text-align: justify;">
-				<div class="col-sm-6 col-md-push-6 col-xs-12 ">
-					<img src="img/career/video.png" class="center-block" width="50%">
-				</div>
-				<div class="col-sm-6 col-md-pull-6  col-xs-12  " style="padding-left: 0px;padding-right: 0px">
-					<h4 class="productName text_primary ">VIDEO EDITOR</h4>
-					<p class="section_text2" style="margin-top:10px">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-					<p class="section_text2"> Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-					<div class="row joinRowRight">
-						<div class='box btn'>APPLY</div>
-					</div>
-				</div>
-			</div>
+<div class="full-width  ">
+	<img src="img/career/bk.png" width="100%">
+</div>
 
-			<div id="developer" class="col-sm-12 col-xs-12 " style="width: 100%;margin-top: 8%;text-align: justify;">
-				<div class="col-sm-6 col-xs-12 ">
-					<img src="img/career/developer.png" class="center-block" width="50%">
-				</div>
-				<div class="col-sm-6  col-xs-12  " style="padding-left: 0px;padding-right: 0px">
-					<h4 class="productName text_primary ">DEVELOPER</h4>
-					<p class="section_text2" style="margin-top:10px">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-					<p class="section_text2"> Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-					<div class="row joinRowLeft">
-						<div class='box btn'>APPLY</div>
-					</div>
-				</div>
-			</div>
+<div class="container">
+<!-- <div class="full-width bk-clr-fff"> -->
 
-			<div id="contentWriter" class="col-sm-12 col-xs-12 " style="width: 100%;margin-top: 8%;text-align: justify;">
-				<div class="col-sm-6 col-md-push-6 col-xs-12 ">
-					<img src="img/career/content.png" class="center-block" width="50%">
-				</div>
-				<div class="col-sm-6 col-md-pull-6  col-xs-12  " style="padding-left: 0px;padding-right: 0px">
-					<h4 class="productName text_primary ">CONTENT WRITER</h4>
-					<p class="section_text2" style="margin-top:10px">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-					<p class="section_text2"> Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-					<div class="row joinRowRight">
-						<div class='box btn'>APPLY</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
+    <section>
+        <h1 class="text-center primary-color letter-spacing-4x">LEAD ROCKETEERS</h1>
+        <hr/>
+        <div class="row margin-top5 ">
+            
+            <div class="col-md-6 col-xs-12 team-member">
+                <div class="team-member-inside">
+                    <div class="team-member-info">
+                       <div class="team-member-name"><a href="#">Tony Pius</a></div>
+                       <div class="team-member-position">Producer</div>
+                       <div class="team-member-social">
+                          <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-github" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+                       </div>
+                    </div>
+                    <div class="team-member-photo">
+                       <img src="img/teams/team-member-4.png" alt="">
+                    </div>
+                </div>
+                <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12 team-member">
+                <div class="team-member-inside">
+                    <div class="team-member-info">
+                       <div class="team-member-name"><a href="#">Melvin Manoj</a></div>
+                       <div class="team-member-position">Producer</div>
+                       <div class="team-member-social">
+                          <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-github" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+                       </div>
+                    </div>
+                    <div class="team-member-photo">
+                       <img src="img/teams/team-member-4.png" alt="">
+                    </div>
+                </div>
+                <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
+                </div>
+            </div>
+            
+        </div>
+        <div class="row margin-top5 ">
+            <div class="col-md-6 col-xs-12 team-member">
+                <div class="team-member-inside">
+                    <div class="team-member-info">
+                       <div class="team-member-name"><a href="#">Prashath Joseph</a></div>
+                       <div class="team-member-position">Producer</div>
+                       <div class="team-member-social">
+                          <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-github" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+                       </div>
+                    </div>
+                    <div class="team-member-photo">
+                       <img src="img/teams/team-member-4.png" alt="">
+                    </div>
+                </div>
+                <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12 team-member">
+                <div class="team-member-inside">
+                    <div class="team-member-info">
+                       <div class="team-member-name"><a href="#">Geo Joy</a></div>
+                       <div class="team-member-position">Producer</div>
+                       <div class="team-member-social">
+                          <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-github" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+                       </div>
+                    </div>
+                    <div class="team-member-photo">
+                       <img src="img/teams/team-member-4.png" alt="">
+                    </div>
+                </div>
+                <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
+                </div>
+            </div>
+        </div>
+          <h1 class="text-center primary-color letter-spacing-4x">LEAD ROCKETEERS</h1>
+        <hr/>
+        <div class="row margin-top4" >
+            <div class="col-md-4 col-xs-12 team-member">
+                <div class="team-member-inside">
+                    <div class="team-member-info">
+                       <div class="team-member-name"><a href="#">Ajeesh CL</a></div>
+                       <div class="team-member-position">Producer</div>
+                       <div class="team-member-social">
+                          <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-github" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+                       </div>
+                    </div>
+                    <div class="team-member-photo">
+                       <img src="img/teams/team-member-4.png" alt="">
+                    </div>
+                </div>
+                <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12 team-member">
+                <div class="team-member-inside">
+                    <div class="team-member-info">
+                       <div class="team-member-name"><a href="#">Nipun Babu</a></div>
+                       <div class="team-member-position">Producer</div>
+                       <div class="team-member-social">
+                          <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-github" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+                       </div>
+                    </div>
+                    <div class="team-member-photo">
+                       <img src="img/teams/team-member-4.png" alt="">
+                    </div>
+                </div>
+                <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12 team-member">
+                <div class="team-member-inside">
+                    <div class="team-member-info">
+                       <div class="team-member-name"><a href="#">Azil Antony</a></div>
+                       <div class="team-member-position">Producer</div>
+                       <div class="team-member-social">
+                          <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-github" aria-hidden="true"></a>
+                          <a href="#" class="fa fa-linkedin" aria-hidden="true"></a>
+                       </div>
+                    </div>
+                    <div class="team-member-photo">
+                       <img src="img/teams/team-member-4.png" alt="">
+                    </div>
+                </div>
+                <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+	<section>
+    	<h1 class="text-center primary-color letter-spacing-4x">WE ARE HIRING</h1>
+    	<hr/>
+    	<div class="row margin-top5">
+    		<div class="col-sm-4">
+    			<img src="img/career/designer.png" width="100%">
+    			<h2 class="primary-color text-center capitalize padding-top-10x">designer</h2>
+    			<a ui-sref="designer">
+    				<h3 class="line-space-2x secondary-color text-center hover">Chief Information Security Officer</h3>
+    			</a>
+    			<a ui-sref="designer">
+    				<h3 class="line-space-2x secondary-color text-center hover">Director, Engineering: Storage</h3>
+    			</a>
+    			<a ui-sref="designer">
+    				<h3 class="line-space-2x secondary-color text-center hover">Engineer: Application Security</h3>
+    			</a>
+    			<a ui-sref="designer">
+    				<h3 class="line-space-2x secondary-color text-center hover">Engineer: Edge</h3>
+    			</a>
+    		</div>
+    		<div class="col-sm-4">
+    			<img src="img/career/developer.png" width="100%">
+    			<h2 class="primary-color text-center capitalize  padding-top-10x">developer</h2>
+    			<a ui-sref="developer">
+    				<h3 class="line-space-2x secondary-color text-center hover">Data Center Engineer</h3>
+    			</a>
+    			<a ui-sref="developer">
+    				<h3 class="line-space-2x secondary-color text-center hover">Engineer: Network</h3>
+    			</a>
+    			<a ui-sref="developer">
+    				<h3 class="line-space-2x secondary-color text-center hover">Receiving & Logistics Coordinator</h3>
+    			</a>
+    			<a ui-sref="developer">
+    				<h3 class="line-space-2x secondary-color text-center hover">Technical Program Manager</h3>
+    			</a>
+    			
+    		</div>
+    		<div class="col-sm-4">
+    			<img src="img/career/content.png" width="100%">
+    			<h2 class="primary-color text-center capitalize  padding-top-10x">content writer</h2>
+    			<a ui-sref="content">
+    				<h3 class="line-space-2x secondary-color text-center hover">Director, Developer Relations</h3>
+    			</a>
+    			<a ui-sref="content">
+    				<h3 class="line-space-2x secondary-color text-center hover">Senior Product Manager</h3>
+    			</a>
+    			<a ui-sref="content">
+    				<h3 class="line-space-2x secondary-color text-center hover">Senior Product Manager: Databases</h3>
+    			</a>
+    			<a ui-sref="content">
+    				<h3 class="line-space-2x secondary-color text-center hover">Senior Product Manager: Developer Tools</h3>
+    			</a>
+    		</div>
+    	</div>
+    </section>
 </div>
 <footer-directive></footer-directive>

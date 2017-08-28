@@ -1,0 +1,91 @@
+
+.filtr-item {
+    padding: 1rem;
+}
+.item-desc {
+    background-color:#f5f5f5;
+    /*background-color: rgba(0,0,0,0.5);*/
+    color: #000;
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+}
+
+
+.item-desc:before {
+   content: '';
+   position: absolute;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 3px;
+   background-image: -webkit-gradient(linear, left top, right top, from(#A22024), to(#f9df33));
+   background-image: -webkit-linear-gradient(left, #A22024, #f9df33);
+   background-image: -o-linear-gradient(left, #A22024, #f9df33);
+   background-image: linear-gradient(to right, #A22024, #f9df33);
+   background-size: 100% 100%;
+}
+
+
+
+
+
+.portfol{
+    width: 19%;text-align: center;
+}
+
+/* Filter controls */
+.simplefilter li, .multifilter li, .sortandshuffle li {
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+}
+.simplefilter li {
+    /*background-color: #585858;*/
+    background-color: #FFFFFF;
+}
+.simplefilter li.active {
+    /*background-color: #212121;*/
+    color: #b32024;
+    border-bottom: 1px solid #b32024;
+}
+.multifilter li {
+    background-color: #4b9eff;
+}
+.multifilter li.active {
+    background-color: #2265b4;
+}
+
+/* Shuffle and sort controls */
+select {
+    padding: 1rem 1rem;
+    text-transform: uppercase;
+}
+.sortandshuffle .shuffle-btn {
+    background-color: #dec800;
+}
+.sortandshuffle .sort-btn {
+    background-color: #de0000;
+}
+.sortandshuffle .sort-btn.active {
+    background-color: #9d0000;
+}
+
+/* Search control */
+.search-row {
+    margin-left: 2.5rem;
+}
+.filtr-search {
+    padding: 0.5rem;
+    text-transform: uppercase;
+}
+
+

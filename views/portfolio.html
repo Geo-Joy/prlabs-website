@@ -1,237 +1,237 @@
-<!-- portfolio page -->
 <style type="text/css">
-    .snip1273 {
-  font-family: 'Raleway', Arial, sans-serif;
+.service-item {
   position: relative;
-  /*float: left;*/
-  /*margin: 10px 1%;*/
-  /*min-width: 310px -60px;*/
-  /*max-width: 310px;*/
+  display: block;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-size: calc(20px + 12vw);
+  border:0;
+}
+@media (min-width: 768px) {
+  .service-item {
+    font-size: 5.4vw;
+  }
+}
+.service-item-photo {
+  overflow-x: hidden;
+}
+.service-item-photo img {
   width: 100%;
-  color: #ffffff;
-  text-align: left;
-  background-color: #000000;
-  font-size: 16px;
+  -webkit-transition: .3s ease .1s;
+  -o-transition: .3s ease .1s;
+  transition: .3s ease .1s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-filter: blur(0);
+  border:0;
 }
-.snip1273 * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
-}
-.snip1273 img {
-  position: relative;
-  max-width: 100%;
-  vertical-align: top;
-}
-.snip1273 figcaption {
+.service-item-caption {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  padding: 20px 30px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  width: 100%
 }
-.snip1273 figcaption:before,
-.snip1273 figcaption:after {
-  width: 1px;
-  height: 0;
+
+
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .service-item-caption {
+    bottom: 15px;
+    right: 15px;
+  }
 }
-.snip1273 figcaption:before {
-  right: 0;
-  top: 0;
+.service-item-title {
+  display: block;
+  float: right;
+  padding: 0 10px;
+  font-size: .52em;
+  line-height: 1.385em;
+  background: #13161d;
+  color: #70b615;
 }
-.snip1273 figcaption:after {
-  left: 0;
-  bottom: 0;
+.service-item-price {
+  display: block;
+  float: right;
+  padding: 0 10px;
+  font-size: .16em;
+  line-height: 3.8em;
+  color: #fff;
+  background: #26282f;
 }
-.snip1273 h3,
-.snip1273 p {
-  line-height: 1.5em;
-}
-.snip1273 h3 {
-  margin: 0 0 5px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.snip1273 p {
-  font-size: 0.8em;
+.service-item-price b {
+  font-size: 3em;
+  line-height: 1.3em;
   font-weight: 500;
-  margin: 0 0 15px;
+  color: #70b615;
 }
-.snip1273 a {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
+.service-item-description {
+  text-align: -webkit-right;
 }
-.snip1273:before,
-.snip1273:after,
-.snip1273 figcaption:before,
-.snip1273 figcaption:after {
-  position: absolute;
-  content: '';
-  background-color: red;
-  z-index: 1;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
-  /*opacity: 0.8;*/
+.service-item-description :before {
+   content: '';
+   position: absolute;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 3px;
+   background-image: -webkit-gradient(linear, left top, right top, from(#A22024), to(#f9df33));
+   background-image: -webkit-linear-gradient(left, #A22024, #f9df33);
+   background-image: -o-linear-gradient(left, #A22024, #f9df33);
+   background-image: linear-gradient(to right, #A22024, #f9df33);
+   background-size: 100% 100%;
 }
-.snip1273:before,
-.snip1273:after {
-  height: 2px;
-  width: 0%;
-}
-.snip1273:before {
-  top: 0;
-  left: 0;
-}
-.snip1273:after {
-  bottom: 0;
-  right: 0;
-}
-.snip1273:hover img,
-.snip1273.hover img {
-  opacity: 0.4;
-}
-.snip1273:hover figcaption,
-.snip1273.hover figcaption {
-  opacity: 1;
-}
-.snip1273:hover figcaption:before,
-.snip1273.hover figcaption:before,
-.snip1273:hover figcaption:after,
-.snip1273.hover figcaption:after {
-  height: 100%;
-}
-.snip1273:hover:before,
-.snip1273.hover:before,
-.snip1273:hover:after,
-.snip1273.hover:after {
+
+
+
+.service-item-description span {
+  display: table;
   width: 100%;
+  text-align: center;
+  padding: 2px 7px;
+  font-size: .18em;
+  line-height: 2.444em;
+  color: #000;
+  background: #f5f5f5;
 }
-.snip1273:hover:before,
-.snip1273.hover:before,
-.snip1273:hover:after,
-.snip1273.hover:after,
-.snip1273:hover figcaption:before,
-.snip1273.hover figcaption:before,
-.snip1273:hover figcaption:after,
-.snip1273.hover figcaption:after {
-  opacity: 0.1;
+@media (max-width: 1199px) {
+  .service-item-description span {
+    font-size: 13px;
+  }
 }
+@media (max-width: 991px) and (min-width: 768px) {
+  .service-item-description span {
+    font-size: 11px;
+  }
+}
+@media (max-width: 767px) {
+  .service-item-description span {
+    font-size: 15px;
+  }
+}
+.service-item:hover .service-item-photo img {
+  -webkit-transform: scale(1.149) rotate(2deg);
+  -ms-transform: scale(1.149) rotate(2deg);
+  transform: scale(1.149) rotate(2deg);
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+.padding-left-right-7{
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+ .service-item-photo img   {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+
 </style>
-
-
-
-
-
-
-
-
-
-
-
-<div class="container sec">
-    <section class="section">
-    	<div class="row">
-    		<h2 class="sectionHead text_primary post">OUR PORTFOLIO</h2>
-    	</div>
-    	<div class="row post">
-            <ul class="simplefilter">
-                <li class="active portfol" data-filter="all">ALL</li>
-                <li class="portfol" data-filter="1" >DESIGN</li>
-                <li class="portfol" data-filter="2" >UI/UX</li>
-                <li class="portfol" data-filter="3" >PHOTOGRAPHY</li>
-                <li class="portfol" data-filter="4" >VIDEOGRAPHY</li>
-                <!-- <li data-filter="5">OTHERS</li> -->
-            </ul>
-    	</div>
-        <div class="row post">
-            <div class="filtr-container">
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5" data-sort="Busy streets">
-                    <figure class="snip1273">
-                        <img src="img/portfolio/1.png" alt="sample72"/>
-                        <figcaption>
-                            <span class="item-desc">PROJECT NAME</span>
-                        </figcaption>
-                    </figure>
+<div class="container">
+<section>
+    <h1 class="text-center primary-color letter-spacing-4x">OUR PORTFOLIO</h1>
+    <hr/>
+    <div class="row gutter-15 services-grid margin-top5">
+        <div class="col-sm-4 padding-left-right-7">
+            <a ui-sref="portfolio" class="service-item">
+                <div class="service-item-photo">
+                    <img src="img/portfolio/services-grid-1a.jpg" class="abc" alt="">
+                    <div class="overlay"></div>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 5" data-sort="Luminous night">
-                    <figure class="snip1273">
-                        <img src="img/portfolio/2.png" alt="sample72"/>
-                        <figcaption>
-                            <span class="item-desc">PROJECT NAME</span>
-                        </figcaption>
-                    </figure>
+                <div class="service-item-caption">
+                    <div class="clearfix">
+                        <!-- <span class="service-item-price">$<b>45</b>/hour</span>
+                        <span class="service-item-title h-gradient"><span>Recording</span></span> -->
+                    </div>
+                    <div class="service-item-description">
+                        <span>24 channels of simultaneous recording in</span>
+                    </div>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 4" data-sort="City wonders">
-                    <figure class="snip1273">
-                        <img src="img/portfolio/3.png" alt="sample72"/>
-                        <figcaption>
-                            <span class="item-desc">PROJECT NAME</span>
-                        </figcaption>
-                    </figure>
+            </a>
+            <a  ui-sref="portfolio" class="service-item">
+                <div class="service-item-photo">
+                    <img src="img/portfolio/services-grid-2a.jpg" alt="">
+                     <div class="overlay"></div>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="In production">
-                    <figure class="snip1273">
-                        <img src="img/portfolio/4.png" alt="sample72"/>
-                        <figcaption>
-                            <span class="item-desc">PROJECT NAME</span>
-                        </figcaption>
-                    </figure>
+                <div class="service-item-caption">
+                    <div class="clearfix">
+                        <!-- <span class="service-item-price">$<b>75</b>/hour</span>
+                        <span class="service-item-title h-gradient"><span>Engineering</span></span> -->
+                    </div>
+                    <div class="service-item-description">
+                        <span>24 channels of simultaneous recording in</span>
+                    </div>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 4" data-sort="Industrial site">
-                    <figure class="snip1273">
-                        <img src="img/portfolio/5.png" alt="sample72"/>
-                        <figcaption>
-                            <span class="item-desc">PROJECT NAME</span>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Peaceful lake">
-                    <figure class="snip1273">
-                        <img src="img/portfolio/6.png" alt="sample72"/>
-                        <figcaption>
-                            <span class="item-desc">PROJECT NAME</span>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5" data-sort="City lights">
-                    <figure class="snip1273">
-                        <img src="img/portfolio/7.png" alt="sample72"/>
-                        <figcaption>
-                            <span class="item-desc">PROJECT NAME</span>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Dreamhouse">
-                    <figure class="snip1273">
-                        <img src="img/portfolio/1.png" alt="sample72"/>
-                        <figcaption>
-                            <span class="item-desc">PROJECT NAME</span>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="Restless machines">
-                    <figure class="snip1273">
-                        <img src="img/portfolio/2.png" alt="sample72"/>
-                        <figcaption>
-                            <span class="item-desc">PROJECT NAME</span>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
+            </a>
         </div>
-    </section>
+        <div class="col-sm-4 padding-left-right-7">
+            <a ui-sref="portfolio" class="service-item">
+                <div class="service-item-photo">
+                    <img src="img/portfolio/services-grid-2b.jpg" alt="">
+                     <div class="overlay"></div>
+                </div>
+                <div class="service-item-caption">
+                    <div class="clearfix">
+                        <!-- <span class="service-item-price">$<b>45</b>/hour</span>
+                        <span class="service-item-title h-gradient"><span>Mixing</span></span> -->
+                    </div>
+                    <div class="service-item-description">
+                        <span>24 channels of simultaneous recording in</span>
+                    </div>
+                </div>
+            </a>
+            <a ui-sref="portfolio" class="service-item">
+                <div class="service-item-photo">
+                    <img src="img/portfolio/services-grid-1b.jpg" alt="">
+                     <div class="overlay"></div>
+                </div>
+                <div class="service-item-caption">
+                    <div class="clearfix">
+                        <!-- <span class="service-item-price">$<b>75</b>/hour</span>
+                        <span class="service-item-title h-gradient"><span>Production</span></span> -->
+                    </div>
+                    <div class="service-item-description">
+                        <span>24 channels of simultaneous recording in</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4 padding-left-right-7">
+            <a ui-sref="portfolio" class="service-item">
+                <div class="service-item-photo">
+                    <img src="img/portfolio/services-grid-1c.jpg" alt="">
+                     <div class="overlay"></div>
+                </div>
+                <div class="service-item-caption">
+                    <div class="clearfix">
+                        <!-- <span class="service-item-price">$<b>55</b>/hour</span>
+                        <span class="service-item-title h-gradient"><span>Mastering</span></span> -->
+                    </div>
+                    <div class="service-item-description">
+                        <span>24 channels of simultaneous recording in</span>
+                    </div>
+                </div>
+            </a>
+            <a ui-sref="portfolio" class="service-item">
+                <div class="service-item-photo">
+                    <img src="img/portfolio/services-grid-2c.jpg" alt="">
+                     <div class="overlay"></div>
+                </div>
+                <div class="service-item-caption">
+                    <div class="clearfix">
+                        <!-- <span class="service-item-price">$<b>35</b>/hour</span>
+                        <span class="service-item-title h-gradient"><span>Post Production</span></span> -->
+                    </div>
+                    <div class="service-item-description">
+                        <span>24 channels of simultaneous recording in</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
 </div>
-<script src="js/controls.js"></script>
-<script type="text/javascript">
-    $(function() {
-        $('.filtr-container').filterizr();
-    });
-</script>

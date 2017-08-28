@@ -1,15 +1,122 @@
-<div class="container" style="width: 100%">
-	<footer>
-		<div class="row">
-			<div class="col-sm-4 col-xs-12">
-				<img src="img/logo.png" class="logo">
-			</div>
-			<div class="col-sm-4 col-xs-1"></div>
-			<div class="col-sm-4 col-xs-12" id="socialIconSet">
-				<div class="col-sm-4 col-xs-4"><img src="img/facebook-logo-button.png" class="social" ></div>
-				<div class="col-sm-4 col-xs-4"><img src="img/linkedin-logo-button.png" class="social" ></div>
-				<div class="col-sm-4 col-xs-4"><img src="img/instagram-logo.png" class="social"></div>
-			</div>
-		</div>
-	</footer>
+
+<style type="text/css">
+	li{
+		list-style: none;
+		display: inline;
+		padding: 10px;
+	}
+	.tys{
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+</style>
+<div class="full-width">
+	<div class="container">
+	    <section>
+	    <footer>
+	    	<div class="row tys" style="margin: 0 auto;width: 100%;">
+	    		<ul >
+		    		<a ui-sref="home"><li class="primary-color">HOME</li></a>
+		    		<a ui-sref="home"><li class="primary-color">ABOUT</li></a>
+		    		<a ui-sref="jobs"><li class="primary-color">TEAM</li></a>
+		    		<a ui-sref="home"><li class="primary-color">PRODUCTS</li></a>
+		    		<a ui-sref="home"><li class="primary-color">PORTFOLIO</li></a>
+		    		<a ui-sref="jobs"><li class="primary-color">CAREER</li></a>
+	    		</ul>
+	    	</div>
+	    	<div class="row">
+		    	<div class="col-sm-4 col-md-push-4">
+		    		<h1 class="text-center primary-color letter-spacing-4x">Get In Touch</h1>
+		        	<hr/>
+		    	</div>
+		    	<div class="col-sm-4 col-md-pull-4 footer-logo-container">
+		    		<img src="img/logo.png" width="60%">
+		    	</div>
+		    	<div class="col-sm-4 ">
+		    		<div class="col-sm-2 col-xs-4 padding-right-0">
+		    			<a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook footer-icon " aria-hidden="true" ></i></a>
+		    		</div>
+		    		<div class="col-sm-2 col-xs-4 padding-right-0">
+		    			<a href="https://github.com/" target="_blank"><i class="fa fa-github footer-icon" aria-hidden="true"></i></a>
+		    		</div>
+		    		<div class="col-sm-2 col-xs-4 padding-right-0">
+		    			<a href="https://www.behance.net/" target="_blank"><i class="fa fa-behance footer-icon" aria-hidden="true"></i></a>
+		    		</div>
+		    		<div class="col-sm-2 col-xs-4 padding-right-0">
+		    			<a href="https://www.youtube.com/channel/UCrYDyBO-2WHUACkO61hm1SQ" target="_blank"><i class="fa fa-youtube-play footer-icon" aria-hidden="true"></i></a>
+		    		</div>
+		    		<div class="col-sm-2 col-xs-4 padding-right-0">
+		    			<a href="https://www.google.co.in/maps/place/Paper+Rocket+Labs+Pvt.+Ltd./@12.884396,77.5936233,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae1531dba3ffff:0xe15f8ee71c8158da!8m2!3d12.884396!4d77.595812" target="_blank"><i class="fa fa-map-marker footer-icon" aria-hidden="true" ></i></a>
+		    		</div>
+		    		<div class="col-sm-2 col-xs-4 padding-right-0">
+		    			<a href=""><i class="fa fa-envelope footer-icon" aria-hidden="true" data-toggle="modal" data-target="#myModal"></i></a>
+		    		</div>
+		    	</div>
+		    </div>
+		    </footer>
+	    </section>
+	</div>
+  	<div class="modal fade" id="myModal" role="dialog">
+    	<div class="modal-dialog">
+      		<div class="modal-content">
+        		<div class="modal-header">
+          			<button type="button" class="close" data-dismiss="modal">&times;</button>
+          			<h1 class="text-center primary-color letter-spacing-4x">CONTACT US</h1>
+		        	<hr/>
+        		</div>
+        		<div class="modal-body">
+          			<div class="row">
+          				<div class="col-sm-1 col-xs-2">
+          					<img src="img/map-placeholder.png" width="100%">
+          				</div>
+          				<div class="col-sm-11 col-xs-10">
+          					<h3 class="line-space-2x secondary-color margin-0">E-1-19, KASHYAP, 21, 1st Cross Rd, Syndicate Bank Colony, Omkar Nagar, Arekere, Bengaluru, Karnataka 560076</h3>
+          				</div>
+          			</div>
+          			<div class="row">
+          				<div class="col-sm-1 col-xs-2">
+          					<img src="img/message.png" width="100%">
+          				</div>
+          				<div class="col-sm-11 col-xs-10">
+          					<h3 class=" line-space-2x secondary-color margin-0">mailus@prlabs.io</h3>
+          				</div>
+          			</div>
+          			<div class="row">
+          				<div class="col-sm-1 col-xs-2">
+          					<img src="img/map-placeholder.png" width="100%">
+          				</div>
+          				<div class="col-sm-11 col-xs-10">
+          					<h3 class=" line-space-2x secondary-color margin-0">080-48542547 , +91-9110846399</h3>
+          				</div>
+          			</div>
+          			<div class="row">
+          				<form name="EmailForm"  novalidate>
+							<div class=" cnt-marginfull">
+								<input type="text" placeholder="Name" name="name" ng-model="mail.name" class="inputType" required>
+								<span ng-show="EmailForm.name.$error.required && !EmailForm.name.$pristine" style="color:red">Name is required!</span>
+							</div>
+							<div class=" cnt-marginfull">
+								<input type="email" placeholder="Email" name="email" ng-model="mail.email" class="inputType" ng-pattern="/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i" required>
+								<span ng-show="EmailForm.email.$error.pattern" style="color:red">Incorrect email address.</span>
+			                	<span ng-show="EmailForm.email.$error.required && !EmailForm.email.$pristine" style="color:red">Email is required!</span>
+							</div>
+							<div class=" cnt-marginfull">
+								<input type="text" placeholder="Subject" name="subject" ng-model="mail.subject" class="inputType" required>
+								<span ng-show="EmailForm.subject.$error.required && !EmailForm.subject.$pristine" style="color:red">Subject is required!</span>
+							</div>
+							<div class=" cnt-marginfull">
+								<textarea placeholder="Message" name="message" ng-model="mail.message" class="inputType" required></textarea>
+								<span ng-show="EmailForm.message.$error.required && !EmailForm.message.$pristine" style="color:red">Message is required!</span>
+							</div>
+							<div class=" cnt-marginfull">
+								<button id="submit" ng-disabled="EmailForm.$invalid" ng-click="logEmail()">SUBMIT</button>
+							</div>
+						</form>
+          			</div>
+        		</div>
+      		</div>
+    	</div>
+  	</div>
 </div>

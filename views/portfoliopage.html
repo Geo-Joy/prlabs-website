@@ -1,3 +1,5 @@
+
+
 <div class="container">
     <section>
         <h1 class="text-center primary-color letter-spacing-4x">OUR PORTFOLIO</h1>
@@ -13,45 +15,78 @@
         </div>
         <div class="row">
             <div class="filtr-container" style="min-height: 80vh">
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5" data-sort="Busy streets">
+                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 2" data-sort="Busy streets"  onclick="mode(0)">
                     <img class="img-responsive" src="portfolio/img/city_1.jpg" alt="sample image">
                      <span class="item-desc">Busy Streets</span>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 5" data-sort="Luminous night">
+                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Luminous night" onclick="mode(1)">
                     <img class="img-responsive" src="portfolio/img/nature_2.jpg" alt="sample image">
                     <span class="item-desc">Luminous night</span>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 4" data-sort="City wonders">
+                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 4" data-sort="City wonders" onclick="mode(2)">
                     <img class="img-responsive" src="portfolio/img/city_3.jpg" alt="sample image">
                     <span class="item-desc">city wonders</span>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="In production">
+                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="In production" onclick="mode(3)">
                     <img class="img-responsive" src="portfolio/img/industrial_1.jpg" alt="sample image">
                     <span class="item-desc">in production</span>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 4" data-sort="Industrial site">
+                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 4" data-sort="Industrial site" onclick="mode(4)">
                     <img class="img-responsive" src="portfolio/img/industrial_2.jpg" alt="sample image">
                     <span class="item-desc">industrial site</span>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Peaceful lake">
+                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Peaceful lake" onclick="mode(5)">
                     <img class="img-responsive" src="portfolio/img/nature_1.jpg" alt="sample image">
                     <span class="item-desc">peaceful lake</span>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 5" data-sort="City lights">
+                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 3" data-sort="City lights" onclick="mode(6)">
                     <img class="img-responsive" src="portfolio/img/city_2.jpg" alt="sample image">
                     <span class="item-desc">city lights</span>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Dreamhouse">
+                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 4" data-sort="Dreamhouse" onclick="mode(7)">
                     <img class="img-responsive" src="portfolio/img/nature_3.jpg" alt="sample image">
                     <span class="item-desc">dreamhouse</span>
                 </div>
-                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="Restless machines">
+                <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3" data-sort="Restless machines" onclick="mode(8)">
                     <img class="img-responsive" src="portfolio/img/industrial_3.jpg" alt="sample image">
                     <span class="item-desc">restless machines</span>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="text-center primary-color letter-spacing-4x margin-0" id="port-name">Busy Streets</h2>
+                </div>
+                <div class="modal-body">
+                  
+                    <img class="img-responsive" id="port-img" src="portfolio/img/city_1.jpg" alt="sample image">
+
+                    <h3 class="text-left line-space-2x secondary-color margin-top5" id="port-des">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, </h3>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <footer-directive></footer-directive>
@@ -62,4 +97,66 @@
     $(function() {
         $('.filtr-container').filterizr();
     });
+
+
+
+    var portfolio_array = [
+        {
+            "name":"Busy streets",
+            "img":"portfolio/img/city_1.jpg",
+            "description":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,"
+        },
+        {
+            "name":"Luminous night",
+            "img":"portfolio/img/nature_2.jpg",
+            "description":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,"
+        },
+        {
+            "name":"City wonders",
+            "img":"portfolio/img/city_3.jpg",
+            "description":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,"
+        },
+        {
+            "name":"In production",
+            "img":"portfolio/img/industrial_1.jpg",
+            "description":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,"
+        },
+        {
+            "name":"Industrial site",
+            "img":"portfolio/img/industrial_2.jpg",
+            "description":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,"
+        },
+        {
+            "name":"Peaceful lake",
+            "img":"portfolio/img/nature_1.jpg",
+            "description":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,"
+        },
+        {
+            "name":"City lights",
+            "img":"portfolio/img/city_2.jpg",
+            "description":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,"
+        },
+        {
+            "name":"Dreamhouse",
+            "img":"portfolio/img/nature_3.jpg",
+            "description":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,"
+        },
+        {
+            "name":"Restless machines",
+            "img":"portfolio/img/industrial_3.jpg",
+            "description":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur," 
+        }
+    ]
+
+
+    function mode(index){
+        document.getElementById("port-name").innerHTML = portfolio_array[index].name;
+        document.getElementById("port-des").innerHTML = portfolio_array[index].description;
+        document.getElementById("port-img").src = portfolio_array[index].img;
+        $('#myModal').modal('show');
+
+
+    }
+
+    
 </script>

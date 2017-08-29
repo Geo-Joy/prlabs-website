@@ -13,8 +13,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/jobs',
         templateUrl: 'views/career.html'
     })
-     .state('designer', {
+    .state('designer', {
         url: '/designer',
         templateUrl: 'views/designer.html'
+    })
+      .state('burrow', {
+        url: '/burrow',
+        templateUrl: 'views/burrow.html'
     })
 });

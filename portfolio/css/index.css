@@ -31,13 +31,17 @@
    background-image: linear-gradient(to right, #A22024, #f9df33);
    background-size: 100% 100%;
 }
+.filtr-item:hover{
+  cursor: pointer;
+}
 
 
 
 
 
 .portfol{
-    width: 19%;text-align: center;
+    width: 19%;
+    text-align: center;
 }
 
 /* Filter controls */

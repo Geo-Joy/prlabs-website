@@ -17,8 +17,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/designer',
         templateUrl: 'views/designer.html'
     })
-      .state('burrow', {
+    .state('burrow', {
         url: '/burrow',
         templateUrl: 'views/burrow.html'
     })
+    .state('faith', {
+        url: '/faith',
+        templateUrl: 'views/faith.html'
+    })
+    .state('sync', {
+        url: '/sync',
+        templateUrl: 'views/sync.html'
+    })
+    
 });

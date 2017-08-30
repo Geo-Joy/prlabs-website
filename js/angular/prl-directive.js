@@ -1,4 +1,11 @@
 
+
+app.directive("homeDirective", function() {
+    return {
+        templateUrl : "views/landing.html"
+    };
+});
+
 app.directive("aboutDirective", function() {
     return {
         templateUrl : "views/about.html"

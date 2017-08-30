@@ -20,12 +20,12 @@
 	    <section>
 	    <footer>
 	    	<div class="row tys" style="margin: 0 auto;width: 100%;">
-	    		<ul >
-		    		<a ui-sref="home"><li class="primary-color">HOME</li></a>
-		    		<a ui-sref="home"><li class="primary-color">ABOUT</li></a>
+	    		<ul>
+		    		<a href="#home"><li class="primary-color">HOME</li></a>
+		    		<a href="#about"><li class="primary-color">ABOUT</li></a>
 		    		<a ui-sref="jobs"><li class="primary-color">TEAM</li></a>
-		    		<a ui-sref="home"><li class="primary-color">PRODUCTS</li></a>
-		    		<a ui-sref="home"><li class="primary-color">PORTFOLIO</li></a>
+		    		<a href="#products"><li class="primary-color">PRODUCTS</li></a>
+		    		<a href="#portfolio"><li class="primary-color">PORTFOLIO</li></a>
 		    		<a ui-sref="jobs"><li class="primary-color">CAREER</li></a>
 	    		</ul>
 	    	</div>
@@ -39,22 +39,22 @@
 		    	</div>
 		    	<div class="col-sm-4 ">
 		    		<div class="col-sm-2 col-xs-4 padding-right-0">
-		    			<a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook footer-icon " aria-hidden="true" ></i></a>
+		    			<a href="https://facebook.com/" target="_blank" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook footer-icon " aria-hidden="true" ></i></a>
 		    		</div>
 		    		<div class="col-sm-2 col-xs-4 padding-right-0">
-		    			<a href="https://github.com/" target="_blank"><i class="fa fa-github footer-icon" aria-hidden="true"></i></a>
+		    			<a href="https://github.com/" target="_blank" data-toggle="tooltip" title="Github"><i class="fa fa-github footer-icon" aria-hidden="true"></i></a>
 		    		</div>
 		    		<div class="col-sm-2 col-xs-4 padding-right-0">
-		    			<a href="https://www.behance.net/" target="_blank"><i class="fa fa-behance footer-icon" aria-hidden="true"></i></a>
+		    			<a href="https://www.behance.net/" target="_blank" data-toggle="tooltip" title="Behance"><i class="fa fa-behance footer-icon" aria-hidden="true"></i></a>
 		    		</div>
 		    		<div class="col-sm-2 col-xs-4 padding-right-0">
-		    			<a href="https://www.youtube.com/channel/UCrYDyBO-2WHUACkO61hm1SQ" target="_blank"><i class="fa fa-youtube-play footer-icon" aria-hidden="true"></i></a>
+		    			<a href="https://www.youtube.com/channel/UCrYDyBO-2WHUACkO61hm1SQ" target="_blank" data-toggle="tooltip" title="Youyube"><i class="fa fa-youtube-play footer-icon" aria-hidden="true"></i></a>
 		    		</div>
 		    		<div class="col-sm-2 col-xs-4 padding-right-0">
-		    			<a href="https://www.google.co.in/maps/place/Paper+Rocket+Labs+Pvt.+Ltd./@12.884396,77.5936233,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae1531dba3ffff:0xe15f8ee71c8158da!8m2!3d12.884396!4d77.595812" target="_blank"><i class="fa fa-map-marker footer-icon" aria-hidden="true" ></i></a>
+		    			<a href="https://www.google.co.in/maps/place/Paper+Rocket+Labs+Pvt.+Ltd./@12.884396,77.5936233,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae1531dba3ffff:0xe15f8ee71c8158da!8m2!3d12.884396!4d77.595812" target="_blank" data-toggle="tooltip" title="Map"><i class="fa fa-map-marker footer-icon" aria-hidden="true" ></i></a>
 		    		</div>
 		    		<div class="col-sm-2 col-xs-4 padding-right-0">
-		    			<a href=""><i class="fa fa-envelope footer-icon" aria-hidden="true" data-toggle="modal" data-target="#myModal1"></i></a>
+		    			<a href="" data-toggle="tooltip" title="Contact"><i class="fa fa-envelope footer-icon" aria-hidden="true" data-toggle="modal" data-target="#myModal1"></i></a>
 		    		</div>
 		    	</div>
 		    </div>
@@ -75,7 +75,7 @@
           					<img src="img/map-placeholder.png" width="100%">
           				</div>
           				<div class="col-sm-11 col-xs-10">
-          					<h3 class="line-space-2x secondary-color margin-0">E-1-19, KASHYAP, 21, 1st Cross Rd, Syndicate Bank Colony, Omkar Nagar, Arekere, Bengaluru, Karnataka 560076</h3>
+          					<h3 class="line-space-2x secondary-color margin-0">E-1-21, 1st Cross Rd, Syndicate Bank Colony, Omkar Nagar, Arekere, Bengaluru, Karnataka 560076</h3>
           				</div>
           			</div>
           			<div class="row">
@@ -123,3 +123,30 @@
     	</div>
   	</div>
 </div>
+
+
+
+<script>
+	$(document).ready(function(){
+    	$('[data-toggle="tooltip"]').tooltip();   
+	});
+
+</script>
+
+
+<script>
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>

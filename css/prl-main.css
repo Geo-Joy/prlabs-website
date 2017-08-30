@@ -18,7 +18,7 @@ section{
 	color:#a22024;
 }
 .secondary-color{
-	color: #95989a;
+	color: #5d5e5f;
 }
 h1{
 	font-family: 'SEGOEUI';
@@ -92,6 +92,9 @@ h3{
 }
 .margin-top5{
 	margin-top: 4%;
+}
+.margin-top10{
+	margin-top: 10%;
 }
 .margin-top4{
 	margin-top: 3%;
@@ -322,8 +325,6 @@ h3{
 		margin-top: 10%;
 		margin-bottom: 10%;
 	}
-
-
 	.portfol{
     	width: 100%;
 	}

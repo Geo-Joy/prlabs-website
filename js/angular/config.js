@@ -5,11 +5,19 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/home',
         templateUrl: 'views/home.html'
     })
-    .state('career', {
-        url: '/career',
+    .state('portfolio', {
+        url: '/portfolio',
+        templateUrl: 'views/portfoliopage.html'
+    })
+    .state('jobs', {
+        url: '/jobs',
         templateUrl: 'views/career.html'
     })
-    .state('burrow', {
+    .state('designer', {
+        url: '/designer',
+        templateUrl: 'views/designer.html'
+    })
+      .state('burrow', {
         url: '/burrow',
         templateUrl: 'views/burrow.html'
     })

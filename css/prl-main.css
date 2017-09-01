@@ -44,6 +44,9 @@ h3{
 	color: #727e85;
 	font-weight: 200;
 }
+.height-100vh{
+    height: 100vh;
+}
 .text-center{
 	text-align: center;
 }
@@ -108,6 +111,14 @@ h3{
 
 .gif-right{
 	background-image: linear-gradient(to  right, #fff 30%, #f5f5f5 );
+}
+
+.close{
+    z-index: 999999999999999;
+}
+
+.rocket-img{
+    width: 40%;
 }
 
 
@@ -264,6 +275,270 @@ h3{
 		width: 50%;
 	}
 
+	.homebgImg {
+        width: 100%;
+        padding-top: 3%
+    }
+    .caption,.team-caption{
+    	position: absolute;
+    	top:20%;
+    	left: 50%;
+    }
+    .caption-title,.team-caption-title{
+    	text-align: center;
+    	position: relative; 
+    	left: -50%; 
+    	font-size: 50px;
+    	font-weight: 600;
+    	font-family: 'Montserrat';
+    }
+
+
+
+
+
+
+
+	 #mobileMenu{
+        display: none;
+    }
+    .mob-li{
+        text-align: center;
+        list-style: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+	nav {
+	    padding: 24px 24px 24px 24px;
+	    text-align: right;
+	    position: relative;
+	    width: 100%;
+	    z-index: 999;
+	}
+	.barOp{
+		position: fixed;
+		top:27px;
+		right: 27px;
+	}
+	#nav-1{
+        position: fixed;
+        overflow-x: hidden !important;
+    }
+    .link-1 {
+        transition: 0.3s ease;
+        color: #b32024;
+        text-decoration: none;
+        padding: 20px 0;
+        margin: 0 20px;
+    }
+    #link-ham{
+        /*background: rgba(255, 255, 255, 0.51);*/
+        color: #b32024;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    .link-1:hover {
+        text-decoration: none;
+        color: #000;
+    }
+    .active{
+        color: black;
+        text-decoration: none;
+    }
+
+
+
+    /*team*/
+     .team-grid {
+        text-align: center;
+        overflow: hidden;
+    }
+    .team-grid:not(:first-child) {
+        margin-top: 53px;
+    }
+    .team-member {
+       display: inline-block;
+       margin-right: -4px;
+       vertical-align: top;
+       margin-bottom: 30px;
+       text-align: left;
+    }
+    .team-member-inside {
+        margin-left: auto;
+        margin-right: auto;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background: #f5f5f5;
+        background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#ffffff));
+        background: -webkit-linear-gradient(top, #f5f5f5 0%, #ffffff 100%);
+        background: -o-linear-gradient(top, #f5f5f5 0%, #ffffff 100%);
+        background: linear-gradient(to bottom, #f5f5f5 0%, #ffffff 100%);
+        background-size: 100% 100%;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        overflow: hidden;
+    }
+    .team-member:hover .team-member-inside {
+        background-position: 0 100%;
+        background-size: 100% 200%;
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    }
+    .team-member-photo {
+        margin-left: auto;
+        width: 330px;
+        min-width: 330px;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+    }
+    @media (min-width: 768px) {
+        .team-member-photo {
+            -webkit-transform: translateX(5px);
+            -ms-transform: translateX(5px);
+            transform: translateX(5px);
+        }
+    }
+   @media (min-width: 768px) {
+        .team-member:hover .team-member-photo {
+            -webkit-transform: translateX(-5px);
+            -ms-transform: translateX(-5px);
+            transform: translateX(-5px);
+        }
+    }
+    .team-member-info {
+        padding: 15px 0 15px 20px;
+    }
+    .team-member-info > *:not(: first-child) {
+        margin-top: 10px;
+    }
+    .team-member-name {
+        font-size: 20px;
+        line-height: 26px;
+        text-transform: uppercase;
+    }
+    .team-member-name a {
+        text-decoration: none;
+        color: #A22024
+    }
+    .team-member-name a:hover {
+        color: #D22024;
+    }
+    .team-member-position {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .team-member-position:not(:first-child) {
+        margin-top: 7px;
+    }
+   .team-member-link {
+        display: inline-block;
+        position: relative;
+        left: -20px;
+        height: 45px;
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 500;
+        padding: 10px 18px;
+        color: #70b615;
+        background-color: #181818;
+        text-transform: uppercase;
+        text-decoration: none;
+        -webkit-transition: .1s ease .1s;
+        -o-transition: .1s ease .1s;
+        transition: .1s ease .1s;
+        white-space: nowrap;
+    }
+    .team-member-link i.icon {
+        font-size: 12px;
+        margin-right: 10px;
+    }
+    .team-member-link:hover {
+        color: #fff;
+        background-color: #70b615;
+        text-decoration: none;
+    }
+    .team-member-link:not(:first-child) {
+        margin-top: 15px;
+    }
+    .team-member-social {
+        font-size: 16px;
+        line-height: 27px;
+    }
+    .team-member-social:not(:first-child) {
+        margin-top: 15px;
+    }
+   .team-member-social a {
+       margin-right: 10px;
+       text-decoration: none;
+       color: #232426;
+   }
+   .team-member-social a:hover {
+       text-decoration: none;
+       color: #A22024;
+   }
+   .team-member-text {
+       /*max-width: 370px;*/
+       margin-left: auto;
+       margin-right: auto;
+       position: relative;
+       padding: 35px 30px;
+       background-color: #f5f5f5;
+       color: #696969;
+       font-size: 16px;
+       line-height: 24px;
+   }
+   @media (max-width: 1679px) {
+        .team-member-text {
+        font-size: 15px;
+        line-height: 22px;
+        }
+    }
+    .team-member-text:before {
+       content: '';
+       position: absolute;
+       z-index: 1;
+       top: 0;
+       left: 0;
+       right: 0;
+       height: 3px;
+       background-image: -webkit-gradient(linear, left top, right top, from(#A22024), to(#f9df33));
+       background-image: -webkit-linear-gradient(left, #A22024, #f9df33);
+       background-image: -o-linear-gradient(left, #A22024, #f9df33);
+       background-image: linear-gradient(to right, #A22024, #f9df33);
+       background-size: 100% 100%;
+    }
+    /*team*/
+
+    .product-bg-img{
+    	margin-top: -30%;
+    	opacity: 0.2;
+    }
+
+    .sync-prd-img{
+    	width: 50%;
+    	margin-left: 20%
+    }
+
+    .homebgImg{
+        display: block;
+    }
+    .landing-img,.sync-landing-img,.burrow-landing-img,.career-landing-img,.faith-landing-img,.portfolio-landing-img{
+        display: hidden;
+    }
+
+
 
 
 
@@ -328,8 +603,448 @@ h3{
 	.portfol{
     	width: 100%;
 	}
+	nav{
+		width: 100%;
+		overflow:hidden !important;
+
+	}
+    .close{
+        z-index: 999999999999999;
+    }
+    .rocket-img{
+        width: 100%;
+    }
+	
+	
+	
+	.team-member-photo{
+		width: 200px;
+		min-width: 200px;
+	}
+	.product-bg-img{
+		display: none  !important;
+	}
+	.prhide{
+		text-align: center;
+	}
+	.sync-prd-img{
+		margin-left:0px;
+		width: 70%; 
+	}
+	.client-img{
+		width: 100%;
+	}
+
+
+
+
+    .homebgImg{
+        display: none;
+    }
+    .landing-img,.sync-landing-img,.burrow-landing-img,.career-landing-img,.faith-landing-img,.portfolio-landing-img{
+        display: block;
+    }
+    .landing-img{
+        background-image: url(../img/landing.png);
+        height: 80vh;
+        width: 100%;
+        background-position:  50%;
+        background-size: auto 100%;
+    }
+    .burrow-landing-img{
+        background-image: url(../img/burrow/1.png);
+        height: 80vh;
+        width: 100%;
+        background-position:  12%;
+        background-size: auto 100%;
+    }
+    .faith-landing-img{
+        background-image: url(../img/faith/faith.png);
+        height: 80vh;
+        width: 100%;
+        background-position:  12%;
+        background-size: auto 100%;
+    }
+    .portfolio-landing-img{
+        background-image: url(../img/portfolio/portfolio.png);
+        height: 80vh;
+        width: 100%;
+        background-position:  50%;
+        background-size: auto 100%;
+    }
+    .sync-landing-img{
+        background-image: url(../img/sync/sync.png);
+        height: 60vh;
+        width: 100%;
+        background-position:50%;
+        background-size: auto 100%;
+    }
+    .career-landing-img{
+        background-image: url(../img/1.png);
+        height: 80vh;
+        width: 100%;
+        background-position:  28%;
+        background-size: auto 100%;
+    }
+    .caption{
+        left:13%;
+        top:20%;
+    }
+    .caption-title{
+        left:-0%;
+        font-size:22px; 
+    }
+ /*   .team-caption{
+        left: 50%;
+        top:30%;
+    }
+    .team-caption-title{
+        left:0%;
+        font-size:22px; 
+    }*/
+	
 }
 
+/*@media only screen and (min-width : 300px) and (max-width : 320px){
+
+   
+        #homebg{
+            width: 100%;
+            overflow-x: hidden !important;
+        }
+        .landing-img{
+            width: 1000px;
+            margin-left: -107%;
+            margin-top: 25%;  
+        }
+        .burrow-landing-img{
+            width: 1100px;
+            margin-left: -32%;
+            margin-top: -2%;  
+        }
+        .career-landing-img{
+            width: 1100px;
+            margin-left: -70%;
+            margin-top: -5%;  
+        }
+        .sync-landing-img{
+            width: 758px;
+            margin-left: -68%;
+            margin-top: 35%;  
+        }
+        .portfolio-landing-img{
+            width: 980px;
+            margin-left: -104%;
+            margin-top: 5%;  
+        }
+        .caption{
+            left: 7%;
+            top:35%;
+        }
+        .caption-title{
+            left:0%;
+            font-size:22px; 
+        }
+        .team-caption{
+            left: 28%;
+            top:30%;
+        }
+        .team-caption-title{
+            left:0%;
+            font-size:22px; 
+        }
+   
+
+}
+@media only screen and (min-width : 371px) and (max-width : 400px){
+
+       
+        #homebg{
+            width: 100%;
+            overflow-x: hidden !important;
+        }
+        .landing-img{
+            width: 1000px;
+            margin-left: -80%;
+            margin-top: 25%;  
+        }
+        .burrow-landing-img{
+            width: 1300px;
+            margin-left: -32%;
+            margin-top: 10%;  
+        }
+        .career-landing-img{
+            width: 1200px;
+            margin-left: -60%;
+            margin-top: 10%;  
+        }
+        .sync-landing-img{
+            width: 850px;
+            margin-left: -61%;
+            margin-top: 35%;  
+        }
+        .portfolio-landing-img{
+            width: 1080px;
+            margin-left: -92%;
+            margin-top: 35%;  
+        }
+        .caption{
+            left: 14%;
+            top:35%;
+        }
+        .caption-title{
+            left:0%;
+            font-size:22px; 
+        }
+        .team-caption{
+            left: 28%;
+            top:30%;
+        }
+        .team-caption-title{
+            left:0%;
+            font-size:22px; 
+        }
+   
+
+}
+
+@media only screen and (min-width : 401px) and (max-width : 430px){
+
+        
+        #homebg{
+            width: 100%;
+            overflow-x: hidden !important;
+        }
+        .landing-img{
+            width: 1200px;
+            margin-left: -95%;
+            margin-top: 25%;  
+        }
+        .burrow-landing-img{
+            width: 1400px;
+            margin-left: -30%;
+            margin-top: 10%;  
+        }
+        .career-landing-img{
+            width: 1250px;
+            margin-left: -60%;
+            margin-top: 10%;  
+        }
+        .sync-landing-img{
+            width: 900px;
+            margin-left: -60%;
+            margin-top: 45%;  
+        }
+        .portfolio-landing-img{
+            width: 1280px;
+            margin-left: -105%;
+            margin-top: 20%;  
+        }
+        .caption{
+            left: 18%;
+            top:35%;
+        }
+        .caption-title{
+            left:0%;
+            font-size:22px; 
+        }
+        .team-caption{
+            left: 30%;
+            top:30%;
+        }
+        .team-caption-title{
+            left:0%;
+            font-size:22px; 
+        }
+    
+
+}
+
+@media only screen and (min-width : 431px) and (max-width : 699px){
+
+        
+        #homebg{
+            width: 100%;
+            overflow-x: hidden !important;
+        }
+        .landing-img{
+            width: 1800px;
+            margin-left: -100%;
+            margin-top: 25%;  
+        }
+        .burrow-landing-img{
+            width: 1400px;
+            margin-left: -40%;
+            margin-top: 10%;  
+        }
+        .career-landing-img{
+            width: 1250px;
+            margin-left: -60%;
+            margin-top: 10%;  
+        }
+        .sync-landing-img{
+            width: 900px;
+            margin-left: -60%;
+            margin-top: 45%;  
+        }
+        .portfolio-landing-img{
+            width: 1280px;
+            margin-left: -105%;
+            margin-top: 35%;  
+        }
+        .caption{
+            left: 13%;
+            top:30%;
+        }
+        .caption-title{
+            left:0%;
+            font-size:35px; 
+        }
+        .team-caption{
+            left: 30%;
+            top:30%;
+        }
+        .team-caption-title{
+            left:0%;
+            font-size:22px; 
+        }
+    
+
+}
+    
+@media only screen and (min-width : 700px) and (max-width : 770px){
+
+       
+        #homebg{
+            width: 100%;
+            overflow-x: hidden !important;
+        }
+        .landing-img{
+            width: 2400px;
+            margin-left: -106%;
+            margin-top: -8%;  
+        }
+        .burrow-landing-img{
+            width: 2100px;
+            margin-left: -16%;
+            margin-top: 10%;  
+        }
+        .career-landing-img{
+            width: 2250px;
+            margin-left: -58%;
+            margin-top: 0%;  
+        }
+        .sync-landing-img{
+            width: 1800px;
+            margin-left: -67%;
+            margin-top: 20%;  
+        }
+        .portfolio-landing-img{
+            width: 2280px;
+            margin-left: -98%;
+            margin-top: 0%;  
+        }
+        .caption{
+            left: 11%;
+            top:25%;
+        }
+        .caption-title{
+            left:0%;
+            font-size:50px; 
+        }
+        .team-caption{
+            left: 25%;
+            top:30%;
+        }
+        .team-caption-title{
+            left:0%;
+            font-size:50px; 
+        }
+ 
+}    
+
+@media only screen and (min-width : 771px) and (max-width : 1000px){
+
+       
+        #homebg{
+            width: 100%;
+            overflow-x: hidden !important;
+        }
+        .landing-img{
+            width: 2500px;
+            margin-left: -106%;
+            margin-top: 15%;  
+        }
+        .burrow-landing-img{
+            width: 2400px;
+            margin-left: -22%;
+            margin-top: 10%;  
+        }
+        .career-landing-img{
+            width: 2400px;
+            margin-left: -57%;
+            margin-top: 10%;  
+        }
+        .sync-landing-img{
+            width: 900px;
+            margin-left: -60%;
+            margin-top: 45%;  
+        }
+        .portfolio-landing-img{
+            width: 2500px;
+            margin-left: -108%;
+            margin-top: 5%;  
+        }
+        .caption{
+            left: 11%;
+            top:30%;
+        }
+        .caption-title{
+            left:0%;
+            font-size:50px; 
+        }
+        .team-caption{
+            left: 25%;
+            top:30%;
+        }
+        .team-caption-title{
+            left:0%;
+            font-size:50px; 
+        }
+  
+}*/
+
+
+
+@media (min-width: 400px) and (max-width : 1400px) and (orientation: landscape) {
+    .rocket-img{
+        width: 50%;
+    }
+    
+        #homebg{
+            width: 100%;
+            overflow-x: hidden !important;
+        }
+        .landing-img,.burrow-landing-img,.career-landing-img,.sync-landing-img,.portfolio-landing-img{
+            width: 100%;
+            margin-left: 0%;
+            margin-top: 10%;  
+        }
+       
+        .caption,.team-caption{
+            left: 50%;
+            top:20%;
+        }
+        .caption-title,.team-caption-title{
+            left:-50%;
+            font-size:22px; 
+        }
+    
+        .height-100vh{
+            height: 100%;
+        }
+}
+   
 
 
 

@@ -1,0 +1,86 @@
+
+
+<nav id="nav-1">
+    <div id="deskMenu">
+        <span class="navMenu" >
+            <a class="link-1" href="#home" onclick="closer()" >HOME</a>
+            <a class="link-1" href="#about"  onclick="closer()">ABOUT</a>
+            <a class="link-1" ui-sref="jobs" onclick="closer()" >TEAM</a>
+            <a class="link-1" href="#products" onclick="closer()" >PRODUCTS</a>
+            <a class="link-1" href="#service" onclick="closer()" >SERVICES</a>
+            <a class="link-1" href="#portfolio" onclick="closer()" >PORTFOLIO</a>
+            <a class="link-1" ui-sref="jobs" onclick="closer()" >CAREER</a>
+            <i class="fa fa-times fa-2x " id="link-ham" onclick="closer()" aria-hidden="true" ></i>
+        </span>
+    </div>
+    <div id="mobileMenu">
+            <li class="mob-li" ><a class="link-1" href="#home" onclick="closer()">HOME</a></li>
+            <li class="mob-li" ><a class="link-1" href="#about" onclick="closer()">ABOUT</a></li>
+            <li class="mob-li" ><a class="link-1" ui-sref="jobs" onclick="closer()">TEAM</a></li>
+            <li class="mob-li" ><a class="link-1" href="#products" onclick="closer()">PRODUCTS</a></li>
+            <li class="mob-li" ><a class="link-1" href="#portfolio" onclick="closer()">PORTFOLIO</a></li>
+            <li class="mob-li" ><a class="link-1" href="#service" onclick="closer()">SERVICES</a></li>
+            <li class="mob-li" ><a class="link-1" ui-sref="jobs" onclick="closer()">CAREER</a></li>
+            <li class="mob-li" ><i class="fa fa-times fa-2x " id="link-ham" onclick="closer()" aria-hidden="true" ></i></li>
+    </div>
+    <span>
+        <i class="fa fa-bars fa-2x barOp " id="link-ham" onclick="menu()" aria-hidden="true" ></i>
+    </span>
+</nav>
+
+
+
+
+
+<script>
+    $(document).ready(function(){
+        $(".navMenu").animate({
+            "margin-right": '-1000px'
+        });
+
+        var w = window.innerWidth;
+        if(w > 800){
+            $("#mobileMenu").hide();
+        }else{
+            $("#deskMenu").hide();
+        }
+    });
+    function menu() {
+        var w = window.innerWidth;
+        if(w > 800){
+            $(".navMenu").animate({
+                "margin-right": '0px'
+            },1000) ;
+        }else{
+            $("#mobileMenu").show();
+        }
+        $(".barOp").hide();
+        document.getElementById('nav-1').style.backgroundColor = "#fff"; 
+    }
+    function closer(){
+        $(".navMenu").animate({
+            "margin-right": '-1000px'
+        },1000);
+        $("#mobileMenu").hide();
+        document.getElementById('nav-1').style.backgroundColor = "transparent"; 
+        $(".barOp").show(1000);
+    }
+</script>
+
+
+<script>
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>

@@ -1,10 +1,43 @@
 
-
+app.directive("navDirective", function() {
+    return {
+        templateUrl : "views/menu.html"
+    };
+});
 app.directive("homeDirective", function() {
     return {
         templateUrl : "views/landing.html"
     };
 });
+
+app.directive("burrowDirective", function() {
+    return {
+        templateUrl : "views/burrow-landing.html"
+    };
+});
+
+app.directive("careerDirective", function() {
+    return {
+        templateUrl : "views/career-landing.html"
+    };
+});
+
+app.directive("faithDirective", function() {
+    return {
+        templateUrl : "views/faith-landing.html"
+    };
+});
+app.directive("portfoliopageDirective", function() {
+    return {
+        templateUrl : "views/portfoliopage-landing.html"
+    };
+});
+app.directive("syncDirective", function() {
+    return {
+        templateUrl : "views/sync-landing.html"
+    };
+});
+
 
 app.directive("aboutDirective", function() {
     return {

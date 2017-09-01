@@ -85,5 +85,18 @@
         $(".prhide").hide();
         $("#prd1").show();
         $('#icon1').addClass( "fa-dot-circle-o" );
+
+        setInterval(function(){ 
+        	loop()
+         },3000);
     });
+	var count =1
+    function loop(){
+        $("#prd"+count).show().siblings(".prhide").hide();
+        $(".fa" ).removeClass( "fa-dot-circle-o" );
+        $("#icon"+count).addClass( "fa-dot-circle-o" );
+    	if(count == 5){
+    		count = 1
+    	}else{count ++;}
+    }
 </script>

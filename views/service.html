@@ -3,10 +3,11 @@
 		<h1 class="text-center primary-color letter-spacing-4x">OUR SERVICES</h1>
 		<hr/>
 	</div>
-	<!-- <div class="full-width gif-left">
+	<div class="full-width gif-left">
 		<div class="container">
 			<div class="row margin-top5 margin-bottom2">
 		<div class="col-sm-6 col-xs-12 col-md-push-6 ">
+			<div id="deep-learning"></div>
 		</div>
 		<div class="col-sm-6 col-xs-12 col-md-pull-6 ">
 			<h2 class="primary-color text-right capitalize mob-text-head">Application design & development</h2>
@@ -14,20 +15,22 @@
 		</div>
 			</div>
 		</div>
-	</div> 
+	</div>  
+
 	<div class="full-width gif-right">
 		<div class="container">
 			<div class="row margin-top5 margin-bottom2">
-			<div class="col-sm-6  ">
-				<div id="marketing"></div>
+			<div class="col-sm-6">
+				<div id="block-chain"></div>
 			</div>
-			<div class="col-sm-6 ">
+			<div class="col-sm-6  ">
 				<h2 class="primary-color text-left capitalize mob-text-head">Application design & development</h2>
 				<h3 class="line-space-2x secondary-color text-left">Design and graphics are an integral part of establishing your brand identity and recognition. We help in providing the look, feel and inner workings of your preference, but with our intrepid knowledge of what will make you stand out from a sea of other competitors and maintain that edge over them</h3>
 			</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
+
 
 	<div class="full-width gif-left">
 		<div class="container">
@@ -135,7 +138,7 @@
              }
         }
         else{
-        	console.log("not-appear");
+        	// console.log("not-appear");
         }
     }); 
 
@@ -161,7 +164,7 @@
              }
         }
         else{
-        	console.log("not-appear");
+        	// console.log("not-appear");
         }
     }); 
 
@@ -186,7 +189,7 @@
              }
         }
         else{
-        	console.log("not-appear");
+        	// console.log("not-appear");
         }
     }); 
 
@@ -211,7 +214,7 @@
              }
         }
         else{
-        	console.log("not-appear");
+        	// console.log("not-appear");
         }
     }); 
 
@@ -235,12 +238,12 @@
              }
         }
         else{
-        	console.log("not-appear");
+        	// console.log("not-appear");
         }
     }); 
 
 
-     var isActive5 = false;
+    var isActive5 = false;
 	$(window).scroll(function() {
         var hT5 = $('#iot').offset().top,
         hH5 = $('#iot').outerHeight(),
@@ -260,7 +263,60 @@
              }
         }
         else{
-        	console.log("not-appear");
+        	// console.log("not-appear");
+        }
+    }); 
+
+
+
+
+
+
+    var isActive6 = false;
+	$(window).scroll(function() {
+        var hT6 = $('#deep-learning').offset().top,
+        hH6 = $('#deep-learning').outerHeight(),
+        wH6 = $(window).height(),
+        wS6 = $(this).scrollTop();
+       
+        if (wS6 > (hT6+hH6-wH6)){
+        	if(!isActive6 ){
+                var animation = bodymovin.loadAnimation({
+  					container: document.getElementById('deep-learning'),
+  					renderer: 'svg',
+  					loop: false,
+  					autoplay: true,
+  					path: 'img/services/deep-learning/deep-learning.json'
+				})
+                isActive6 = true;
+             }
+        }
+        else{
+        	// console.log("not-appear");
+        }
+    }); 
+
+    var isActive7 = false;
+	$(window).scroll(function() {
+        var hT7 = $('#block-chain').offset().top,
+        hH7 = $('#block-chain').outerHeight(),
+        wH7 = $(window).height(),
+        wS7 = $(this).scrollTop();
+       
+        if (wS7 > (hT7+hH7-wH7)){
+        	if(!isActive7 ){
+                var animation = bodymovin.loadAnimation({
+  					container: document.getElementById('block-chain'),
+  					renderer: 'svg',
+  					loop: false,
+  					autoplay: true,
+  					path: 'img/services/block-chain/block-chain.json'
+				})
+                isActive7 = true;
+             }
+        }
+        else{
+        	// console.log("not-appear");
         }
     }); 
 

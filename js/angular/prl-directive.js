@@ -10,6 +10,8 @@ app.directive("homeDirective", function() {
     };
 });
 
+
+
 app.directive("burrowDirective", function() {
     return {
         templateUrl : "views/burrow-landing.html"

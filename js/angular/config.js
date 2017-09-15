@@ -3,7 +3,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state('home', {
         url: '/home',
-        templateUrl: 'views/home.html'
+        templateUrl: 'views/home.html',
+        controller: 'homeCtrl',
+
     })
     .state('portfolio', {
         url: '/portfolio',
@@ -11,7 +13,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
     })
     .state('jobs', {
         url: '/jobs',
-        templateUrl: 'views/career.html'
+        templateUrl: 'views/career.html',
+        controller: 'jobCtrl'
+
     })
     .state('designer', {
         url: '/designer',

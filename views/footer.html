@@ -13,6 +13,9 @@
 	ul{
 		padding-left: 0px;
 	}
+	.co-icons{
+		font-size: 15px;
+	}
 
 </style>
 <div class="full-width">
@@ -21,18 +24,18 @@
 	    <footer>
 	    	<div class="row tys" style="margin: 0 auto;width: 100%;">
 	    		<ul>
-		    		<a href="#home"><li class="primary-color footer-link">HOME</li></a>
-		    		<a href="#about"><li class="primary-color footer-link">ABOUT</li></a>
-		    		<a ui-sref="jobs"><li class="primary-color footer-link">TEAM</li></a>
-		    		<a href="#products"><li class="primary-color footer-link">PRODUCTS</li></a>
-		    		<a href="#service"><li class="primary-color footer-link">SERVICES</li></a>
-		    		<a href="#portfolio"><li class="primary-color footer-link">PORTFOLIO</li></a>
-		    		<a ui-sref="jobs"><li class="primary-color footer-link">CAREER</li></a>
+		    		<a href="#home" ng-click="menu_cntrl('home')"><li class="primary-color footer-link">HOME</li></a>
+		    		<a href="#about" ng-click="menu_cntrl('about')"><li class="primary-color footer-link">ABOUT</li></a>
+		    		<a href="#team" ng-click="menu_cntrl('team')"><li class="primary-color footer-link">TEAM</li></a>
+		    		<a href="#products" ng-click="menu_cntrl('products')"><li class="primary-color footer-link">PRODUCTS</li></a>
+		    		<a href="#service" ng-click="menu_cntrl('service')"><li class="primary-color footer-link">SERVICES</li></a>
+		    		<a href="#portfolio" ng-click="menu_cntrl('portfolio')"><li class="primary-color footer-link">PORTFOLIO</li></a>
+		    		<a href="#job" ng-click="menu_cntrl('job')" ><li class="primary-color footer-link">CAREER</li></a>
 	    		</ul>
 	    	</div>
 	    	<div class="row">
 		    	<div class="col-sm-4 col-md-push-4">
-		    		<h1 class="text-center primary-color letter-spacing-4x">Get In Touch</h1>
+		    		<h1 class="text-center primary-color letter-spacing-4x">GET IN TOUCH</h1>
 		        	<hr/>
 		    	</div>
 		    	<div class="col-sm-4 col-md-pull-4 footer-logo-container">
@@ -73,7 +76,7 @@
         		<div class="modal-body">
           			<div class="row">
           				<div class="col-sm-1 col-xs-2">
-          					<img src="img/map-placeholder.png" width="100%">
+          					<h3 class="margin-0"><i class="fa fa-map-marker primary-color " aria-hidden="true"></i></h3>
           				</div>
           				<div class="col-sm-11 col-xs-10">
           					<h3 class="line-space-2x secondary-color margin-0">E-1-21, 1st Cross Rd, Syndicate Bank Colony, Omkar Nagar, Arekere, Bengaluru, Karnataka 560076</h3>
@@ -81,7 +84,7 @@
           			</div>
           			<div class="row">
           				<div class="col-sm-1 col-xs-2">
-          					<img src="img/message.png" width="100%">
+          					<h3 class="margin-0"><i class="fa fa-envelope primary-color " aria-hidden="true"></i></h3>
           				</div>
           				<div class="col-sm-11 col-xs-10">
           					<h3 class=" line-space-2x secondary-color margin-0">mailus@prlabs.io</h3>
@@ -89,7 +92,7 @@
           			</div>
           			<div class="row">
           				<div class="col-sm-1 col-xs-2">
-          					<img src="img/map-placeholder.png" width="100%">
+          					<h3 class="margin-0"><i class="fa fa-phone primary-color " aria-hidden="true"></i></h3>
           				</div>
           				<div class="col-sm-11 col-xs-10">
           					<h3 class=" line-space-2x secondary-color margin-0">080-48542547 , +91-9110846399</h3>

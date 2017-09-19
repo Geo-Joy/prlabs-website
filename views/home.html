@@ -1,12 +1,19 @@
-<nav-directive></nav-directive>
-<home-directive id="home"></home-directive>
 
-<about-directive id="about"></about-directive>
-<product-directive id="products"></product-directive>
-<services-directive  id="service"></services-directive>
-<portfolio-directive id="portfolio"></portfolio-directive>
-<slider-directive ></slider-directive>
-<footer-directive></footer-directive>
+<div ng-show="loader" class="loader">
+	<img src="img/loader.GIF" class="loader-img" >
+</div>
+
+<div ng-hide="loader">
+	<nav-directive></nav-directive>
+	<home-directive id="home"></home-directive>
+	<about-directive id="about"></about-directive>
+	<product-directive id="products"></product-directive>
+	<services-directive  id="service"></services-directive>
+	<portfolio-directive id="portfolio"></portfolio-directive>
+	<slider-directive ></slider-directive>
+	<footer-directive></footer-directive>
+</div>
+
 
 	
 

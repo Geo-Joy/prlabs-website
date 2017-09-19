@@ -9,7 +9,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
     })
     .state('portfolio', {
         url: '/portfolio',
-        templateUrl: 'views/portfoliopage.html'
+        templateUrl: 'views/portfoliopage.html',
+        controller: 'portfolioCtrl'
     })
     .state('jobs', {
         url: '/jobs',
@@ -23,15 +24,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
     })
     .state('burrow', {
         url: '/burrow',
-        templateUrl: 'views/burrow.html'
+        templateUrl: 'views/burrow.html',
+        controller: 'burrowCtrl'
     })
     .state('faith', {
         url: '/faith',
-        templateUrl: 'views/faith.html'
+        templateUrl: 'views/faith.html',
+        controller: 'faithCtrl'
     })
     .state('sync', {
         url: '/sync',
-        templateUrl: 'views/sync.html'
+        templateUrl: 'views/sync.html',
+        controller: 'syncCtrl'
     })
     
 });

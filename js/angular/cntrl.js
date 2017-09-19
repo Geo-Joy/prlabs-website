@@ -13,13 +13,56 @@ app.controller('prlCtrl', ['$scope','$state','$http', function ($scope,$state,$h
         });	
     }
 }]);
-app.controller('homeCtrl', function($scope, $document,$stateParams){
-    console.log("asd");
+app.controller('homeCtrl', function($scope,$timeout){
+    $scope.loader = true;
+    $timeout(function() {
+        $scope.loader = false;
+    }, 2500);
+
 });
+app.controller('portfolioCtrl', function($scope,$timeout){
+    $scope.loader = true;
+    $timeout(function() {
+        $scope.loader = false;
+    }, 500);
+
+});
+app.controller('jobCtrl', function($scope,$timeout){
+    $scope.loader = true;
+    $timeout(function() {
+        $scope.loader = false;
+    }, 500);
+
+});
+app.controller('burrowCtrl', function($scope,$timeout){
+    $scope.loader = true;
+    $timeout(function() {
+        $scope.loader = false;
+    }, 500);
+
+});
+app.controller('faithCtrl', function($scope,$timeout){
+    $scope.loader = true;
+    $timeout(function() {
+        $scope.loader = false;
+    }, 500);
+
+});
+app.controller('syncCtrl', function($scope,$timeout){
+    $scope.loader = true;
+    $timeout(function() {
+        $scope.loader = false;
+    }, 500);
+
+});
+
+
+
+
+
 
 app.controller('menuCntrl', function($scope, $document,$stateParams,$state,$rootScope){
     $scope.menu_cntrl = function(data){
-       
         if(data == 'team' || data == 'job' ){
             $state.go('jobs');
         }else{
@@ -29,9 +72,11 @@ app.controller('menuCntrl', function($scope, $document,$stateParams,$state,$root
     }
 });
 
-app.controller('jobCtrl', function($scope, $document,$rootScope){
 
-});
+
+
+
+
 
 
 

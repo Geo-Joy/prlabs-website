@@ -1,9 +1,13 @@
-<nav-directive></nav-directive>
-<faith-directive></faith-directive>
-	<div class="container">
-		<h1 class="text-center primary-color letter-spacing-4x margin-top5">NEED ASSISTANCE</h1>
-		<hr/>
-		<h3 class="text-center line-space-2x secondary-color margin-top5">An app that allows you to get in touch with your spirituality and connect with your community, Faith is the answer. Faith provides users with the ability to find their preferred parish or church located in their vicinity. </h3>
+<div ng-show="loader" class="loader">
+    <img src="img/loader.GIF" class="loader-img" >
+</div>
+<div ng-hide="loader">
+    <nav-directive></nav-directive>
+    <faith-directive></faith-directive>
+    <div class="container">
+    	<h1 class="text-center primary-color letter-spacing-4x margin-top5">NEED ASSISTANCE</h1>
+    	<hr/>
+    	<h3 class="text-center line-space-2x secondary-color margin-top5">An app that allows you to get in touch with your spirituality and connect with your community, Faith is the answer. Faith provides users with the ability to find their preferred parish or church located in their vicinity. </h3>
         <div class="row margin-top5">
             <div class="col-md-6" style="z-index: 999999;">
                 <div class="prhide" id="prd1">
@@ -75,7 +79,7 @@
         <img src="img/faith/faith-down.png" width="100%" class="product-bg-img">
     </div>
     <footer-directive></footer-directive>
-
+</div>
 <script>
      $('.pr-links').on('click', function(){
         var target = $(this).attr('rel');

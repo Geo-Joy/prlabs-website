@@ -14,6 +14,7 @@ section{
 	padding: 2% 0% 2% 0%;
 }
 
+
 .primary-color{
 	color:#a22024;
 }
@@ -43,6 +44,16 @@ h3{
 	line-height: 30px;
 	color: #727e85;
 	font-weight: 200;
+}
+.loader{
+    text-align: center;
+    position: relative;
+    width: 100vw;
+    margin-top: 40vh;
+    overflow-y:hidden;
+}
+.loader-img{
+    width: 10%;
 }
 .height-100vh{
     height: 100vh;
@@ -578,6 +589,9 @@ h3{
 
 
 @media (max-width: 1100px) {
+    .loader-img{
+        width: 30%;
+    }
 	.width-50x{
 		width: 100%;
 	}
@@ -774,11 +788,16 @@ h3{
         font-weight: 600;
         font-family: 'Montserrat';
     }
+    .loader-img{
+        width: 30%;
+    }
     
 }
 
 @media(min-width: 370px) and (max-width : 399px){
-
+    .loader-img{
+        width: 30%;
+    }
     .caption{
         position: absolute;
         top:20%;
@@ -796,7 +815,9 @@ h3{
 }
 
 @media(min-width: 400px) and (max-width : 500px){
-
+    .loader-img{
+        width: 30%;
+    }
     .caption{
         position: absolute;
         top:20%;
@@ -814,7 +835,9 @@ h3{
 }
 
 @media(min-width: 500px) and (max-width : 700px){
-
+    .loader-img{
+        width: 30%;
+    }
     .caption{
         position: absolute;
         top:20%;
@@ -831,7 +854,9 @@ h3{
     
 }
 @media(min-width: 701px) and (max-width : 1100px){
-
+    .loader-img{
+        width: 30%;
+    }
     .caption{
         position: absolute;
         top:20%;
@@ -847,6 +872,34 @@ h3{
     }    
    
 }
+
+@media only screen and (min-width : 1700px) and (max-width : 1900px) {
+
+    #rocketImg4{
+        margin-left: 0%;
+        margin-top:30%;
+    }
+
+}
+
+@media only screen and (min-width : 1900px) and (max-width : 2100px){
+    #rocketImg4{
+        margin-left: 0%;
+        margin-top:50%;
+    }
+
+}
+@media only screen and (min-width :2100px) and (max-width : 2300px) {
+    #rocketImg4{
+        margin-left: 0%;
+        margin-top:65%;
+    }
+}
+
+/*@media only screen and (min-width :2300px) and (max-width : 2500px) {}
+@media only screen and (min-width :2500px) and (max-width : 3900px) {}
+@media only screen and (min-width :3900px) and (max-width : 5000px) {}*/
+
 @media (min-width: 400px) and (max-width : 1400px) and (orientation: landscape) {
         .rocket-img{
             width: 50%;

@@ -18,10 +18,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: 'jobCtrl'
 
     })
-    .state('designer', {
-        url: '/designer',
-        templateUrl: 'views/designer.html'
-    })
     .state('burrow', {
         url: '/burrow',
         templateUrl: 'views/burrow.html',
@@ -36,6 +32,22 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/sync',
         templateUrl: 'views/sync.html',
         controller: 'syncCtrl'
+    })
+    .state('designer', {
+        url: '/designer',
+        templateUrl: 'views/designer.html'
+    })
+    .state('ui-ux-designer', {
+        url: '/ui-ux-designer',
+        templateUrl: 'views/UI-UX-designer.html'
+    })
+    .state('editor', {
+        url: '/editor',
+        templateUrl: 'views/editor.html'
+    })
+    .state('mean-stack-developer', {
+        url: '/mean-stack-developer',
+        templateUrl: 'views/mean-stack-developer.html'
     })
     
 });

@@ -688,42 +688,42 @@ h3{
         display: block !important;
     }
     .landing-img{
-        background-image: url(../img/landing.png);
+        background-image: url(../img/landing.jpg);
         height: 80vh;
         width: 100%;
         background-position:  50%;
         background-size: auto 100%;
     }
     .burrow-landing-img{
-        background-image: url(../img/burrow/1.png);
+        background-image: url(../img/burrow/1.jpg);
         height: 80vh;
         width: 100%;
         background-position:  12%;
         background-size: auto 100%;
     }
     .faith-landing-img{
-        background-image: url(../img/faith/faith.png);
+        background-image: url(../img/faith/faith.jpg);
         height: 80vh;
         width: 100%;
         background-position:  12%;
         background-size: auto 100%;
     }
     .portfolio-landing-img{
-        background-image: url(../img/portfolio/portfolio.png);
+        background-image: url(../img/portfolio/portfolio.jpg);
         height: 80vh;
         width: 100%;
         background-position:  50%;
         background-size: auto 100%;
     }
     .sync-landing-img{
-        background-image: url(../img/sync/sync.png);
+        background-image: url(../img/sync/sync.jpg);
         height: 60vh;
         width: 100%;
         background-position:50%;
         background-size: auto 100%;
     }
     .career-landing-img{
-        background-image: url(../img/1.png);
+        background-image: url(../img/1.jpg);
         height: 80vh;
         width: 100%;
         background-position:  28%;
@@ -877,22 +877,100 @@ h3{
 
     #rocketImg4{
         margin-left: 0%;
+        margin-top:40%;
+        width: 15%;
+    }
+    #rocketImg1{
+        width: 60%;
+         margin-left: -15%;
+    }
+    #rocketImg2{
+         width: 12%;
+        margin-left: -50%;
         margin-top:30%;
     }
+    #rocketImg3 {
+        width: 7%;
+        margin-left: -5%;
+        margin-top: -8%;
+    }
+    #rocketImg5 {
+        width: 5%;
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+    #rocketImg6 {
+        width: 3%;
+        margin-left: 0%;
+        margin-top: 40%;
+    }
+   
 
 }
 
 @media only screen and (min-width : 1900px) and (max-width : 2100px){
     #rocketImg4{
-        margin-left: 0%;
+        margin-left: 8%;
+        margin-top:50%;
+         width: 18%;
+    }
+    #rocketImg1{
+        width: 80%;
+         margin-left: -20%;
+    }
+    #rocketImg2{
+         width: 12%;
+        margin-left: -70%;
         margin-top:50%;
     }
+    #rocketImg3 {
+        width: 7%;
+        margin-left: -5%;
+        margin-top: -8%;
+    }
+    #rocketImg5 {
+        width: 5%;
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+    #rocketImg6 {
+        width: 3%;
+        margin-left: 0%;
+        margin-top: 50%;
+    }
+
+    
 
 }
 @media only screen and (min-width :2100px) and (max-width : 2300px) {
     #rocketImg4{
-        margin-left: 0%;
+        margin-left: 3%;
         margin-top:65%;
+         width: 20%;
+    }
+    #rocketImg1{
+        width: 80%;
+        margin-left: -23%;
+    }
+    #rocketImg2{
+        width: 12%;
+        margin-left: -65%;
+        margin-top:55%;
+    }
+    #rocketImg3 {
+        width: 7%;
+        margin-left: -5%;
+        margin-top: -8%;
+    }
+    #rocketImg5 {
+        width: 5%;
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+    #rocketImg6 {
+        width: 3%;
+        margin-left: 0%;
+        margin-top: 50%;
     }
 }
 

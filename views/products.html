@@ -80,7 +80,8 @@
 
 	$(document).ready(function(){
 		 var myTimer = setInterval(loop, 4000);
-	        clearInterval(myTimer);
+	        // clearInterval(myTimer);
+	        window.clearTimeout(myTimer);
 			$(".pr-prhide").hide();
 	        $("#pr-prd1").show();
 	        $('#pr-icon1').addClass( "fa-dot-circle-o" );

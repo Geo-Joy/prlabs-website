@@ -24,35 +24,35 @@ app.controller('portfolioCtrl', function($scope,$timeout){
     $scope.loader = true;
     $timeout(function() {
         $scope.loader = false;
-    }, 500);
+    }, 1000);
 
 });
 app.controller('jobCtrl', function($scope,$timeout){
     $scope.loader = true;
     $timeout(function() {
         $scope.loader = false;
-    }, 500);
+    }, 1000);
 
 });
 app.controller('burrowCtrl', function($scope,$timeout){
     $scope.loader = true;
     $timeout(function() {
         $scope.loader = false;
-    }, 500);
+    }, 1000);
 
 });
 app.controller('faithCtrl', function($scope,$timeout){
     $scope.loader = true;
     $timeout(function() {
         $scope.loader = false;
-    }, 500);
+    }, 1000);
 
 });
 app.controller('syncCtrl', function($scope,$timeout){
     $scope.loader = true;
     $timeout(function() {
         $scope.loader = false;
-    }, 500);
+    }, 1000);
 
 });
 

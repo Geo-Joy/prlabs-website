@@ -1,136 +1,129 @@
 <style type="text/css">
-.service-item {
-  position: relative;
-  display: block;
-  text-decoration: none;
-  margin-bottom: 15px;
-  font-size: calc(20px + 12vw);
-  border:0;
-}
-@media (min-width: 768px) {
-  .service-item {
-    font-size: 5.4vw;
-  }
-}
-.service-item-photo {
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-.service-item-photo img {
-  width: 100%;
-  -webkit-transition: .3s ease .1s;
-  -o-transition: .3s ease .1s;
-  transition: .3s ease .1s;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-filter: blur(0);
-  border:0;
-}
-.service-item-caption {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  width: 100%
-}
+    .service-item {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        margin-bottom: 15px;
+        font-size: calc(20px + 12vw);
+        border:0;
+    }
+    @media (min-width: 768px) {
+        .service-item {
+            font-size: 5.4vw;
+        }
+    }
+    .service-item-photo {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .service-item-photo img {
+        width: 100%;
+        -webkit-transition: .3s ease .1s;
+        -o-transition: .3s ease .1s;
+        transition: .3s ease .1s;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-filter: blur(0);
+        border:0;
+    }
+    .service-item-caption {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        width: 100%
+    }
 
+    @media (max-width: 991px) and (min-width: 768px) {
+        .service-item-caption {
+            bottom: 15px;
+            right: 15px;
+        }
+    }
+    .service-item-title {
+        display: block;
+        float: right;
+        padding: 0 10px;
+        font-size: .52em;
+        line-height: 1.385em;
+        background: #13161d;
+        color: #70b615;
+    }
+    .service-item-price {
+        display: block;
+        float: right;
+        padding: 0 10px;
+        font-size: .16em;
+        line-height: 3.8em;
+        color: #fff;
+        background: #26282f;
+    }
+    .service-item-price b {
+        font-size: 3em;
+        line-height: 1.3em;
+        font-weight: 500;
+        color: #70b615;
+    }
+    .service-item-description {
+        text-align: -webkit-right;
+    }   
+    .service-item-description :before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-image: -webkit-gradient(linear, left top, right top, from(#A22024), to(#f9df33));
+        background-image: -webkit-linear-gradient(left, #A22024, #f9df33);
+        background-image: -o-linear-gradient(left, #A22024, #f9df33);
+        background-image: linear-gradient(to right, #A22024, #f9df33);
+        background-size: 100% 100%;
+    }
+    .service-item-description span {
+        display: table;
+        width: 100%;
+        text-align: center;
+        padding: 2px 7px;
+        font-size: .18em;
+        line-height: 2.444em;
+        color: #000;
+        background: #f5f5f5;
+    }
+    @media (max-width: 1199px) {
+        .service-item-description span {
+            font-size: 13px;
+        }
+    }
+    @media (max-width: 991px) and (min-width: 768px) {
+        .service-item-description span {
+            font-size: 11px;
+        }
+    }
+    @media (max-width: 767px) {
+        .service-item-description span {
+            font-size: 15px;
+        }
+    }
+    .service-item:hover .service-item-photo img {
+        -webkit-transform: scale(1.149) rotate(2deg);
+        -ms-transform: scale(1.149) rotate(2deg);
+        transform: scale(1.149) rotate(2deg);
+        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(0%);
+    }
+    .padding-left-right-7{
+        padding-right: 7px;
+        padding-left: 7px;
+    }
 
-
-@media (max-width: 991px) and (min-width: 768px) {
-  .service-item-caption {
-    bottom: 15px;
-    right: 15px;
-  }
-}
-.service-item-title {
-  display: block;
-  float: right;
-  padding: 0 10px;
-  font-size: .52em;
-  line-height: 1.385em;
-  background: #13161d;
-  color: #70b615;
-}
-.service-item-price {
-  display: block;
-  float: right;
-  padding: 0 10px;
-  font-size: .16em;
-  line-height: 3.8em;
-  color: #fff;
-  background: #26282f;
-}
-.service-item-price b {
-  font-size: 3em;
-  line-height: 1.3em;
-  font-weight: 500;
-  color: #70b615;
-}
-.service-item-description {
-  text-align: -webkit-right;
-}
-.service-item-description :before {
-   content: '';
-   position: absolute;
-   z-index: 1;
-   top: 0;
-   left: 0;
-   right: 0;
-   height: 3px;
-   background-image: -webkit-gradient(linear, left top, right top, from(#A22024), to(#f9df33));
-   background-image: -webkit-linear-gradient(left, #A22024, #f9df33);
-   background-image: -o-linear-gradient(left, #A22024, #f9df33);
-   background-image: linear-gradient(to right, #A22024, #f9df33);
-   background-size: 100% 100%;
-}
-
-
-
-.service-item-description span {
-  display: table;
-  width: 100%;
-  text-align: center;
-  padding: 2px 7px;
-  font-size: .18em;
-  line-height: 2.444em;
-  color: #000;
-  background: #f5f5f5;
-}
-@media (max-width: 1199px) {
-  .service-item-description span {
-    font-size: 13px;
-  }
-}
-@media (max-width: 991px) and (min-width: 768px) {
-  .service-item-description span {
-    font-size: 11px;
-  }
-}
-@media (max-width: 767px) {
-  .service-item-description span {
-    font-size: 15px;
-  }
-}
-.service-item:hover .service-item-photo img {
-  -webkit-transform: scale(1.149) rotate(2deg);
-  -ms-transform: scale(1.149) rotate(2deg);
-  transform: scale(1.149) rotate(2deg);
-  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(0%);
-}
-.padding-left-right-7{
-    padding-right: 7px;
-    padding-left: 7px;
-}
-
- .service-item-photo img   {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
-
-
+    .service-item-photo img   {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+    }
 </style>
 <div class="container">
 <section class="margin-top5">
@@ -144,12 +137,9 @@
                     <div class="overlay"></div>
                 </div>
                 <div class="service-item-caption">
-                    <div class="clearfix">
-                        <!-- <span class="service-item-price">$<b>45</b>/hour</span>
-                        <span class="service-item-title h-gradient"><span>Recording</span></span> -->
-                    </div>
+                    <div class="clearfix"></div>
                     <div class="service-item-description">
-                        <span>24 channels</span>
+                        <span>Straight Up Product</span>
                     </div>
                 </div>
             </a>
@@ -159,12 +149,9 @@
                      <div class="overlay"></div>
                 </div>
                 <div class="service-item-caption">
-                    <div class="clearfix">
-                        <!-- <span class="service-item-price">$<b>75</b>/hour</span>
-                        <span class="service-item-title h-gradient"><span>Engineering</span></span> -->
-                    </div>
+                    <div class="clearfix"></div>
                     <div class="service-item-description">
-                        <span>24 channels</span>
+                        <span>T John Fashion Shoot</span>
                     </div>
                 </div>
             </a>
@@ -176,12 +163,9 @@
                      <div class="overlay"></div>
                 </div>
                 <div class="service-item-caption">
-                    <div class="clearfix">
-                        <!-- <span class="service-item-price">$<b>45</b>/hour</span>
-                        <span class="service-item-title h-gradient"><span>Mixing</span></span> -->
-                    </div>
+                    <div class="clearfix"></div>
                     <div class="service-item-description">
-                        <span>24 channels</span>
+                        <span>IIMB Unmaad 2017</span>
                     </div>
                 </div>
             </a>
@@ -191,12 +175,9 @@
                      <div class="overlay"></div>
                 </div>
                 <div class="service-item-caption">
-                    <div class="clearfix">
-                        <!-- <span class="service-item-price">$<b>75</b>/hour</span>
-                        <span class="service-item-title h-gradient"><span>Production</span></span> -->
-                    </div>
+                    <div class="clearfix"></div>
                     <div class="service-item-description">
-                        <span>24 channels</span>
+                        <span>Lavonne Product</span>
                     </div>
                 </div>
             </a>
@@ -208,12 +189,9 @@
                      <div class="overlay"></div>
                 </div>
                 <div class="service-item-caption">
-                    <div class="clearfix">
-                        <!-- <span class="service-item-price">$<b>55</b>/hour</span>
-                        <span class="service-item-title h-gradient"><span>Mastering</span></span> -->
-                    </div>
+                    <div class="clearfix"></div>
                     <div class="service-item-description">
-                        <span>24 channels</span>
+                        <span>Treeroute Android Design</span>
                     </div>
                 </div>
             </a>
@@ -223,12 +201,9 @@
                      <div class="overlay"></div>
                 </div>
                 <div class="service-item-caption">
-                    <div class="clearfix">
-                        <!-- <span class="service-item-price">$<b>35</b>/hour</span>
-                        <span class="service-item-title h-gradient"><span>Post Production</span></span> -->
-                    </div>
+                    <div class="clearfix"></div>
                     <div class="service-item-description">
-                        <span>24 channels</span>
+                        <span>Dolphin Logo & Stationary Design</span>
                     </div>
                 </div>
             </a>

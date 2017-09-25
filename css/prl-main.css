@@ -290,15 +290,13 @@ h3{
         width: 100%;
         padding-top: 3%
     }
-    .caption,.team-caption{
-    	position: absolute;
-    	top:20%;
-    	left: 50%;
+    .caption{
+    	margin-top: -80vh;
+        text-align:center; 
     }
-    .caption-title,.team-caption-title{
+    .caption-title{
     	text-align: center;
     	position: relative; 
-    	left: -50%; 
     	font-size: 50px;
     	font-weight: 600;
     	font-family: 'Montserrat';
@@ -730,13 +728,12 @@ h3{
         background-size: auto 100%;
     }
     .caption{
-        left:13%;
-        top:20%;
+        margin-top: -65vh;
     }
     .caption-title{
-        left:-0%;
         font-size:22px; 
     }
+   
 
 
     /*rocket*/
@@ -775,15 +772,10 @@ h3{
 
 @media(min-width: 300px) and (max-width : 330px){
 
-    .caption{
-        position: absolute;
-        top:20%;
-        left: 12%;
-    }
+    
     .caption-title{
         text-align: center;
         position: relative; 
-        left: 0%; 
         font-size: 20px;
         font-weight: 600;
         font-family: 'Montserrat';
@@ -798,15 +790,10 @@ h3{
     .loader-img{
         width: 30%;
     }
-    .caption{
-        position: absolute;
-        top:20%;
-        left: 10%;
-    }
+   
     .caption-title{
         text-align: center;
         position: relative; 
-        left: 0%; 
         font-size: 25px;
         font-weight: 600;
         font-family: 'Montserrat';
@@ -818,15 +805,10 @@ h3{
     .loader-img{
         width: 30%;
     }
-    .caption{
-        position: absolute;
-        top:20%;
-        left: 15%;
-    }
+   
     .caption-title{
         text-align: center;
-        position: relative; 
-        left: 0%; 
+        position: relative;  
         font-size: 25px;
         font-weight: 600;
         font-family: 'Montserrat';
@@ -838,15 +820,10 @@ h3{
     .loader-img{
         width: 30%;
     }
-    .caption{
-        position: absolute;
-        top:20%;
-        left: 15%;
-    }
+   
     .caption-title{
         text-align: center;
-        position: relative; 
-        left: 0%; 
+        position: relative;  
         font-size: 35px;
         font-weight: 600;
         font-family: 'Montserrat';
@@ -858,14 +835,13 @@ h3{
         width: 30%;
     }
     .caption{
-        position: absolute;
+       /* position: absolute;
         top:20%;
-        left: 15%;
+        left: 15%;*/
     }
     .caption-title{
         text-align: center;
-        position: relative; 
-        left: 0%; 
+        position: relative;  
         font-size: 45px;
         font-weight: 600;
         font-family: 'Montserrat';
@@ -996,20 +972,18 @@ h3{
             margin-top: 10%;  
         }
        
-        .caption,.team-caption{
-            left: 50%;
-            top:20%;
+        .caption{
+            margin-top: -80vh;
         }
-        .caption-title,.team-caption-title{
-            left:-50%;
+        .caption-title{
             font-size:22px; 
         }
     
         .height-100vh{
-            height: 100%;
+            height: 100vh;
         }
 
-      /*rocket*/
+        /*rocket*/
         #rockt{
             text-align: center
         }
@@ -1044,18 +1018,21 @@ h3{
             margin-top:20%;
         }
     /*rocket*/
-
 }
 
 
 @media (min-width: 1200px) and (max-width : 1400px) and (orientation: landscape) {
-
     .rocket-img{
         width: 50%;
         margin-left: 0%
     }
-
+   
 }
+@media (min-width: 1200px) and (max-width : 1400px) {
+     .caption{
+        margin-top: -60vh;
+    }
+} 
 
    
 

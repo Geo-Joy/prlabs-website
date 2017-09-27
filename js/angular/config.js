@@ -1,4 +1,6 @@
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
+    // $locationProvider.hashPrefix(''); // by default '!'
+  // $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/home');
     $stateProvider
     .state('home', {

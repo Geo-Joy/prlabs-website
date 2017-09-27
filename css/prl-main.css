@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900");
+/*@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900");*/
 @font-face { font-family: 'SEGOEUI'; src: url('fonts/segoe-ui/SEGOEUI.TTF'); } 
 @font-face { font-family: 'SEGOEUI'; font-weight: bold; src: url('fonts/segoe-ui/SEGOEUI.TTF');}
 
@@ -7,8 +7,6 @@ body{
 	font-family: 'Montserrat';
 	font-weight: 400;
 	overflow-x: hidden;
-	/*font-family: 'Roboto', sans-serif;*/
-	/*font-family: 'Open Sans', sans-serif;*/
 }
 section{
 	padding: 2% 0% 2% 0%;
@@ -23,7 +21,7 @@ section{
 }
 h1{
 	font-family: 'SEGOEUI';
-  	 font-size: 36px;
+  	font-size: 3em;
   	font-weight: 400;
 }
 hr{
@@ -33,14 +31,14 @@ hr{
 }
 
 h2{
-	font-size: 30px;
+	font-size: 2em;
     line-height: 32px;
     font-weight: 300;
     color: #303638;
     margin: 0 0 28px;
 }
 h3{
-	font-size: 16px;
+	font-size: 1.3em;
 	line-height: 30px;
 	color: #727e85;
 	font-weight: 200;
@@ -49,7 +47,6 @@ h3{
     text-align: center;
     position: relative;
     width: 100vw;
-    margin-top: 40vh;
     overflow-y:hidden;
 }
 .loader-img{
@@ -149,7 +146,8 @@ h3{
     .tg-brands li:nth-child(1),
     .tg-brands li:nth-child(2),
     .tg-brands li:nth-child(3),
-    .tg-brands li:nth-child(4){border-bottom: 1px solid #ddd;}
+    .tg-brands li:nth-child(4)
+    {border-bottom: 1px solid #ddd;}
     .tg-brands li:nth-child(1),
     .tg-brands li:nth-child(5){border-left: 1px solid transparent;}
     .tg-brands li:nth-child(2),
@@ -157,7 +155,10 @@ h3{
     .tg-brands li:nth-child(4),
     .tg-brands li:nth-child(6),
     .tg-brands li:nth-child(7),
-    .tg-brands li:nth-child(8){border-left: 1px solid #ddd;}
+    .tg-brands li:nth-child(8),
+    .tg-brands li:nth-child(10),
+    .tg-brands li:nth-child(11),
+    .tg-brands li:nth-child(12){border-left: 1px solid #ddd;}
     .tg-brands li figure{
         margin: 0;
         width: 100%;
@@ -291,13 +292,18 @@ h3{
         padding-top: 3%
     }
     .caption{
-    	margin-top: -80vh;
-        text-align:center; 
+    	/*margin-top: -80vh;
+        text-align:center; */
+        margin-top: 10%;
+        text-align: center;
+        position: absolute;
+        width: 100%;
     }
+
     .caption-title{
     	text-align: center;
     	position: relative; 
-    	font-size: 50px;
+    	font-size: 3em;
     	font-weight: 600;
     	font-family: 'Montserrat';
     }
@@ -551,35 +557,40 @@ h3{
             text-align: center
         }
 
-        #rocketImg1{
-            width: 40%;
-            margin-left: -9%;
-        }
-        #rocketImg4{
-            width: 10%;
-            margin-left: 0.5%;
-            margin-top:14%;
-        }
-        #rocketImg2{
-            width: 8%;
-            margin-left: -38%;
-            margin-top:12%;
-        }
-        #rocketImg3{
-            width: 3%;
-            margin-left: 2%;
-            margin-top:-8%;
-        }
-        #rocketImg5{
-            width: 3%;
-            margin-left: 0%;
-            margin-top:-8%;
-        }
-        #rocketImg6{
-            width: 3%;
-            margin-left: 0%;
-            margin-top:20%;
-        }
+    #rocketImg1{
+        width: 45%;
+        margin-left:0%;
+    }
+    #rocketImg2{
+        width: 5%;
+        margin-left: -26%;
+        margin-top:18%;
+        position: absolute;
+    }
+    #rocketImg3 {
+        width: 3%;
+        margin-left: -23%;
+        margin-top: 10%;
+        position: absolute;
+    }
+     #rocketImg4{
+        margin-left: -18.5%;
+        margin-top:8%;
+        position: absolute;
+        width: 6.5%;
+    }
+    #rocketImg5 {
+        width: 2.5%;
+        margin-left: -9.5%;
+        margin-top: 11.5%;
+        position: absolute;
+    }
+    #rocketImg6 {
+        width: 1.5%;
+        margin-left: -9%;
+        margin-top: 20%;
+        position: absolute;
+    }
     /*rocket*/
 
 
@@ -587,8 +598,8 @@ h3{
 
 
 @media (max-width: 1100px) {
-    .loader-img{
-        width: 30%;
+    .loader{
+        margin-top:40%;
     }
 	.width-50x{
 		width: 100%;
@@ -609,13 +620,13 @@ h3{
 		text-align: center;
 	}
 	h1{
-		font-size: 25px;
+		font-size: 2em;
 	}
 	h2{
-		font-size: 20px;
+		font-size: 1.4em;
 	}
 	h3{
-		font-size: 14px;
+		/*font-size: 14px;*/
 	}
 	.gif-right,.gif-left{
 		background: #fff;
@@ -728,7 +739,11 @@ h3{
         background-size: auto 100%;
     }
     .caption{
-        margin-top: -65vh;
+       /* margin-top: -65vh;*/
+        margin-top: 30%;
+        text-align: center;
+        position: absolute;
+        width: 100%;
     }
     .caption-title{
         font-size:22px; 
@@ -772,7 +787,12 @@ h3{
 
 @media(min-width: 300px) and (max-width : 330px){
 
-    
+    .caption{
+        margin-top: 30%;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+    }
     .caption-title{
         text-align: center;
         position: relative; 
@@ -835,9 +855,10 @@ h3{
         width: 30%;
     }
     .caption{
-       /* position: absolute;
-        top:20%;
-        left: 15%;*/
+        margin-top: 30%;
+        text-align: center;
+        position: absolute;
+        width: 100%;
     }
     .caption-title{
         text-align: center;
@@ -848,105 +869,193 @@ h3{
     }    
    
 }
+@media only screen and (min-width :1100px) and (max-width : 1300px) {
+    #rocketImg1{
+        width: 45%;
+        margin-left:0%;
+    }
+    #rocketImg2{
+        width: 5%;
+        margin-left: -33%;
+        margin-top:18%;
+        position: absolute;
+    }
+    #rocketImg3 {
+        width: 4%;
+        margin-left: -28%;
+        margin-top: 10%;
+        position: absolute;
+    }
+     #rocketImg4{
+        margin-left: -23%;
+        margin-top:6%;
+        position: absolute;
+        width: 8%;
+    }
+    #rocketImg5 {
+        width: 2.5%;
+        margin-left: -12%;
+        margin-top: 10%;
+        position: absolute;
+    }
+    #rocketImg6 {
+        width: 2%;
+        margin-left: -12%;
+        margin-top: 21%;
+        position: absolute;
+    }
+}
+@media only screen and (min-width :1300px) and (max-width : 1500px) {
+    #rocketImg1{
+        width: 45%;
+        margin-left:0%;
+    }
+    #rocketImg2{
+        width: 5%;
+        margin-left: -30%;
+        margin-top:18%;
+        position: absolute;
+    }
+    #rocketImg3 {
+        width: 4%;
+        margin-left: -25%;
+        margin-top: 10%;
+        position: absolute;
+    }
+     #rocketImg4{
+        margin-left: -20%;
+        margin-top:8%;
+        position: absolute;
+        width: 7%;
+    }
+    #rocketImg5 {
+        width: 2.5%;
+        margin-left: -10%;
+        margin-top: 10%;
+        position: absolute;
+    }
+    #rocketImg6 {
+        width: 2%;
+        margin-left: -10%;
+        margin-top: 21%;
+        position: absolute;
+    }
+}
 
 @media only screen and (min-width : 1700px) and (max-width : 1900px) {
 
-    #rocketImg4{
-        margin-left: 0%;
-        margin-top:40%;
-        width: 15%;
-    }
+   
     #rocketImg1{
-        width: 60%;
-         margin-left: -15%;
+        width: 45%;
+        margin-left:0%;
     }
     #rocketImg2{
-         width: 12%;
-        margin-left: -50%;
-        margin-top:30%;
+        width: 5%;
+        margin-left: -25%;
+        margin-top:18%;
+        position: absolute;
     }
     #rocketImg3 {
-        width: 7%;
-        margin-left: -5%;
-        margin-top: -8%;
+        width: 3%;
+        margin-left: -21%;
+        margin-top: 10%;
+        position: absolute;
+    }
+     #rocketImg4{
+        margin-left: -17%;
+        margin-top:8%;
+        position: absolute;
+        width: 6.5%;
     }
     #rocketImg5 {
-        width: 5%;
-        margin-left: 0%;
-        margin-top: 0%;
+        width: 2%;
+        margin-left: -8.5%;
+        margin-top: 11.5%;
+        position: absolute;
     }
     #rocketImg6 {
-        width: 3%;
-        margin-left: 0%;
-        margin-top: 40%;
+        width: 1.5%;
+        margin-left: -7%;
+        margin-top: 20%;
+        position: absolute;
     }
    
 
 }
 
 @media only screen and (min-width : 1900px) and (max-width : 2100px){
-    #rocketImg4{
-        margin-left: 8%;
-        margin-top:50%;
-         width: 18%;
-    }
     #rocketImg1{
-        width: 80%;
-         margin-left: -20%;
+        width: 45%;
+        margin-left:0%;
     }
     #rocketImg2{
-         width: 12%;
-        margin-left: -70%;
-        margin-top:50%;
+        width: 4%;
+        margin-left: -20%;
+        margin-top:20%;
+        position: absolute;
     }
     #rocketImg3 {
-        width: 7%;
-        margin-left: -5%;
-        margin-top: -8%;
+        width: 3%;
+        margin-left: -18%;
+        margin-top: 10%;
+        position: absolute;
+    }
+     #rocketImg4{
+        margin-left: -15%;
+        margin-top:8%;
+        position: absolute;
+        width: 5.5%;
     }
     #rocketImg5 {
-        width: 5%;
-        margin-left: 0%;
-        margin-top: 0%;
+        width: 2%;
+        margin-left: -8.5%;
+        margin-top: 12%;
+        position: absolute;
     }
     #rocketImg6 {
-        width: 3%;
-        margin-left: 0%;
-        margin-top: 50%;
+        width: 1.5%;
+        margin-left: -7%;
+        margin-top: 20%;
+        position: absolute;
     }
 
     
 
 }
 @media only screen and (min-width :2100px) and (max-width : 2300px) {
-    #rocketImg4{
-        margin-left: 3%;
-        margin-top:65%;
-         width: 20%;
-    }
     #rocketImg1{
-        width: 80%;
-        margin-left: -23%;
+        width: 45%;
+        margin-left:0%;
     }
     #rocketImg2{
-        width: 12%;
-        margin-left: -65%;
-        margin-top:55%;
+        width: 4%;
+        margin-left: -20%;
+        margin-top:20%;
+        position: absolute;
     }
     #rocketImg3 {
-        width: 7%;
-        margin-left: -5%;
-        margin-top: -8%;
+        width: 3%;
+        margin-left: -17%;
+        margin-top: 10%;
+        position: absolute;
+    }
+     #rocketImg4{
+        margin-left: -14.1%;
+        margin-top:8%;
+        position: absolute;
+        width: 5.5%;
     }
     #rocketImg5 {
-        width: 5%;
-        margin-left: 0%;
-        margin-top: 0%;
+        width: 2%;
+        margin-left: -8%;
+        margin-top: 12%;
+        position: absolute;
     }
     #rocketImg6 {
-        width: 3%;
-        margin-left: 0%;
-        margin-top: 50%;
+        width: 1.5%;
+        margin-left: -7%;
+        margin-top: 20%;
+        position: absolute;
     }
 }
 
@@ -954,7 +1063,7 @@ h3{
 @media only screen and (min-width :2500px) and (max-width : 3900px) {}
 @media only screen and (min-width :3900px) and (max-width : 5000px) {}*/
 
-@media (min-width: 400px) and (max-width : 1400px) and (orientation: landscape) {
+@media (min-width: 400px) and (max-width : 1000px) and (orientation: landscape) {
         .rocket-img{
             width: 50%;
             margin-left: 25%
@@ -972,8 +1081,11 @@ h3{
             margin-top: 10%;  
         }
        
-        .caption{
-            margin-top: -80vh;
+       .caption{
+            margin-top: 10%;
+            text-align: center;
+            position: absolute;
+            width: 100%;
         }
         .caption-title{
             font-size:22px; 
@@ -1028,11 +1140,7 @@ h3{
     }
    
 }
-@media (min-width: 1200px) and (max-width : 1400px) {
-     .caption{
-        margin-top: -60vh;
-    }
-} 
+
 
    
 

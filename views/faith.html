@@ -1,6 +1,7 @@
-<div ng-show="loader" class="loader">
+<!-- <div ng-show="loader" class="loader">
     <img src="img/loader.gif" class="loader-img" >
-</div>
+</div> -->
+<div ng-show="loader" class="loader" id="loader-jason" style="height: 100vh"></div>
 <div ng-hide="loader">
     <nav-directive></nav-directive>
     <faith-directive></faith-directive>
@@ -94,4 +95,14 @@
         $("#prd1").show();
         $('#icon1').addClass( "fa-dot-circle-o" );
     });
+</script>
+
+<script type="text/javascript">
+    var animation = bodymovin.loadAnimation({
+        container: document.getElementById('loader-jason'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'img/logo-loader.json'
+    })
 </script>

@@ -1,6 +1,4 @@
-<div ng-show="loader" class="loader">
-    <img src="img/loader.gif" class="loader-img" >
-</div>
+<div ng-show="loader" class="loader" id="loader-jason" style="height: 100vh"></div>
 <div ng-hide="loader">
     <nav-directive></nav-directive>
     <career-directive></career-directive>
@@ -64,7 +62,7 @@
                            <img src="img/teams/team-member-Geo.png" alt="" width="100%">
                         </div>
                     </div>
-                    <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
+                    <div class="team-member-text">Passionate about all things tech, Geo is a self made Cyber Architect. Like the aging of fine wine, his journey began with “the Cycles” on MS DOS. Uniting the forces of design and development is what is he truly stands by. He believes in giving back to the community. Expanding his knowledge base, work or otherwise, is just another day for him!
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-12 team-member">
@@ -83,7 +81,8 @@
                            <img src="img/teams/team-member-prashanth.png" alt="" width="100%">
                         </div>
                     </div>
-                    <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
+                    <div class="team-member-text">For Prashanth, it’s really not about just selling a product. Catering to people’s needs while trying to understand the underlying problem is important to him. What makes him different you ask? Well, dealing with demanding multinational conglomerates and brutal oil giants in the Middle East taught him a lesson or two. It is from here that he learnt that not only does knowing the clients better helps meet their needs and demands but also surpass expectations.
+
                     </div>
                 </div>
             </div>
@@ -106,8 +105,8 @@
                            <img src="img/teams/team-member-Ajeesh.png" alt="" width="100%">
                         </div>
                     </div>
-                    <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
-                    </div>
+                    <!-- <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
+                    </div> -->
                 </div>
                 <div class="col-md-4 col-xs-12 team-member">
                     <div class="team-member-inside">
@@ -125,8 +124,8 @@
                            <img src="img/teams/team-member-Nipun.png" alt="" width="100%">
                         </div>
                     </div>
-                    <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
-                    </div>
+                   <!--  <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
+                    </div> -->
                 </div>
                 <div class="col-md-4 col-xs-12 team-member">
                     <div class="team-member-inside">
@@ -144,8 +143,8 @@
                            <img src="img/teams/team-member-Azil.png" alt="" width="100%">
                         </div>
                     </div>
-                    <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
-                    </div>
+                    <!-- <div class="team-member-text">Construction of a sister studio, on the Glory Recording Studio, began in the mid 1990’s attracting major artists from around the globe. Sadly, Hurricane Hugo devastated the island in 1989, and the studio was forced to close.
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -166,6 +165,10 @@
                     <a ui-sref="editor">
                         <h3 class="line-space-2x secondary-color text-center hover">Photo & Video Editor</h3>
                     </a>
+                     <a ui-sref="animator">
+                        <h3 class="line-space-2x secondary-color text-center hover">Animator</h3>
+                    </a>
+                    
                     <!-- <a ui-sref="designer">
                         <h3 class="line-space-2x secondary-color text-center hover">Engineer: Edge</h3>
                     </a> -->
@@ -189,7 +192,7 @@
                 <div class="col-sm-4">
                     <img src="img/career/content.png" width="100%">
                     <h2 class="primary-color text-center capitalize  padding-top-10x">content writer</h2>
-                     <a ui-sref="mean-stack-developer">
+                     <a ui-sref="content-writer">
                         <h3 class="line-space-2x secondary-color text-center hover">Creative Copy writer</h3>
                     </a>
                     <a ui-sref="mean-stack-developer">
@@ -213,4 +216,15 @@
     </div>
     <footer-directive></footer-directive>
 </div>
+
+
+<script type="text/javascript">
+  var animation = bodymovin.loadAnimation({
+    container: document.getElementById('loader-jason'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'img/logo-loader.json'
+  })
+</script>
 

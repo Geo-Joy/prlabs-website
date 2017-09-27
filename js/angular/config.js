@@ -49,5 +49,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/mean-stack-developer',
         templateUrl: 'views/mean-stack-developer.html'
     })
+    .state('content-writer', {
+        url: '/content-writer',
+        templateUrl: 'views/content-writer.html'
+    })
+    .state('animator', {
+        url: '/animator',
+        templateUrl: 'views/animator.html'
+    })
+   
     
 });

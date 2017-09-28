@@ -17,7 +17,7 @@
 				<div class="col-sm-6 col-md-pull-6">
 					<h2 class="primary-color text-left capitalize mob-text-head">fisap - updates & customization</h2>
 					<h3 class="line-space-2x secondary-color text-left">Looking upon the above quote, FISAP is an easy to use File Sharing Application.Its outstanding features makes it one of the best software for secure online file sharing and document management. The product is easy to use and it can be modified according to the customer's need, whether a private user or a company. We also provide an easy-to-deploy mobile platform support for end users.</h3>
-					<h3 class="primary-color">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></h3>
+					<!-- <h3 class="primary-color">Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i></h3> -->
 				</div>
 				
 			</div>
@@ -77,21 +77,21 @@
         $(".fa" ).removeClass( "fa-dot-circle-o" );
         $("#"+icon).addClass( "fa-dot-circle-o" );
     });
- //    var myTimer = setInterval(loop, 4000);
- //    window.clearTimeout(myTimer);
- //    myTimer = setInterval(loop, 4000);
+    var myTimer = setInterval(loop, 4000);
+    window.clearTimeout(myTimer);
+    myTimer = setInterval(loop, 4000);
 	$(document).ready(function(){
 		$(".pr-prhide").hide();
         $("#pr-prd1").show();
         $('#pr-icon1').addClass( "fa-dot-circle-o" );
     });
-	// var count =1
- //    function loop(){
- //        $("#pr-prd"+count).show().siblings(".pr-prhide").hide();
- //        $(".fa" ).removeClass( "fa-dot-circle-o" );
- //        $("#pr-icon"+count).addClass( "fa-dot-circle-o" );
- //    	if(count == 4){
- //    		count = 1
- //    	}else{count ++;}
- //    }
+	var count =1
+    function loop(){
+        $("#pr-prd"+count).show().siblings(".pr-prhide").hide();
+        $(".fa" ).removeClass( "fa-dot-circle-o" );
+        $("#pr-icon"+count).addClass( "fa-dot-circle-o" );
+    	if(count == 4){
+    		count = 1
+    	}else{count ++;}
+    }
 </script>

@@ -4,10 +4,10 @@
 		<hr/>
 		<div class="col-md-12">
 			<ul class="indicators margin-top5">
-				<li class="pr-links-p" rel="pr-prd1"><i id="pr-icon1" class="fa fa-circle secondary-color" aria-hidden="true"></i></li>
-				<li class="pr-links-p" rel="pr-prd2"><i id="pr-icon2" class="fa fa-circle secondary-color" aria-hidden="true"></i></li>
-				<li class="pr-links-p" rel="pr-prd3"><i id="pr-icon3" class="fa fa-circle secondary-color" aria-hidden="true"></i></li>
-				<li class="pr-links-p" rel="pr-prd4"><i id="pr-icon4" class="fa fa-circle secondary-color" aria-hidden="true"></i></li>
+				<li class="pr-links-p" rel="pr-prd1"><i id="pr-icon1" class="fa fa1 fa-circle secondary-color" aria-hidden="true"></i></li>
+				<li class="pr-links-p" rel="pr-prd2"><i id="pr-icon2" class="fa fa1 fa-circle secondary-color" aria-hidden="true"></i></li>
+				<li class="pr-links-p" rel="pr-prd3"><i id="pr-icon3" class="fa fa1 fa-circle secondary-color" aria-hidden="true"></i></li>
+				<li class="pr-links-p" rel="pr-prd4"><i id="pr-icon4" class="fa fa1 fa-circle secondary-color" aria-hidden="true"></i></li>
 				<!-- <li class="pr-links-p" rel="pr-prd5"><i id="pr-icon5" class="fa fa-circle secondary-color" aria-hidden="true"></i></li> -->
 			</ul>
 			<div class="row pr-prhide" id="pr-prd1">
@@ -73,25 +73,28 @@
     $('.pr-links-p').on('click', function(){
         var target = $(this).attr('rel');
         $("#"+target).show().siblings(".pr-prhide").hide();
-        var icon = $(this).children(".fa").attr("id");
-        $(".fa" ).removeClass( "fa-dot-circle-o" );
+        var icon = $(this).children(".fa1").attr("id");
+        $(".fa1" ).removeClass( "fa-dot-circle-o" );
         $("#"+icon).addClass( "fa-dot-circle-o" );
     });
-    var myTimer = setInterval(loop, 4000);
-    window.clearTimeout(myTimer);
-    myTimer = setInterval(loop, 4000);
+   
 	$(document).ready(function(){
+		
+    clearInterval(myTimer_product);
+   
+     var myTimer_product = setInterval(loop_product, 4000);
 		$(".pr-prhide").hide();
         $("#pr-prd1").show();
         $('#pr-icon1').addClass( "fa-dot-circle-o" );
     });
-	var count =1
-    function loop(){
-        $("#pr-prd"+count).show().siblings(".pr-prhide").hide();
-        $(".fa" ).removeClass( "fa-dot-circle-o" );
-        $("#pr-icon"+count).addClass( "fa-dot-circle-o" );
-    	if(count == 4){
-    		count = 1
-    	}else{count ++;}
+	 var count_product =1;
+    function loop_product(){
+    	console.log()
+        $("#pr-prd"+count_product).show().siblings(".pr-prhide").hide();
+        $(".fa1" ).removeClass( "fa-dot-circle-o" );
+        $("#pr-icon"+count_product).addClass( "fa-dot-circle-o" );
+    	if(count_product == 4){
+    		count_product = 1
+    	}else{count_product ++;}
     }
 </script>

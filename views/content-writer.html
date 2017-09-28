@@ -70,11 +70,14 @@
     var navTop = $('#foo').offset().top;
     $(window).scroll(function(){
         if ($(this).scrollTop() >= navTop) {
+           
+            $('#nav-1').css('position', 'relative');
             $('#foo').css('position', 'fixed');
             $('#foo').css('top', '0');
             $('#foo').css('width', '100%');
         } else {
             $('#foo').css('position', 'relative');
+            $('#nav-1').css('position', 'fixed');
         }
     });
 

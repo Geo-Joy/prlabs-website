@@ -14,7 +14,7 @@
 			</div>
 			<div class="col-sm-6 col-xs-12">
 				<div class="CareersNav-right">
-          			<a target="_blank" href="#" class="Button Button--primary" data-career-apply-link="">Apply Now</a>
+          			<a target="_blank" href="#" onclick="navigation()" class="Button Button--primary" data-career-apply-link="">Apply Now</a>
         		</div>
 			</div>
 		</div>
@@ -67,14 +67,19 @@
     var navTop = $('#foo').offset().top;
     $(window).scroll(function(){
         if ($(this).scrollTop() >= navTop) {
+           
+            $('#nav-1').css('position', 'relative');
             $('#foo').css('position', 'fixed');
             $('#foo').css('top', '0');
             $('#foo').css('width', '100%');
         } else {
             $('#foo').css('position', 'relative');
+            $('#nav-1').css('position', 'fixed');
         }
     });
-
+    function navigation(){
+        $('#nav-1').css('position', 'fixed');
+    }
 
 
 </script>

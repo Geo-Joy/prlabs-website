@@ -13,10 +13,23 @@ app.controller('prlCtrl', ['$scope','$state','$http', function ($scope,$state,$h
         });	
     }
 }]);
-app.controller('homeCtrl', function($scope,$timeout){
+app.controller('homeCtrl', function($scope,$timeout,$rootScope){
     $scope.loader = true;
     $timeout(function() {
         $scope.loader = false;
+        if($rootScope.rout !== undefined){
+            if($rootScope.rout == 'home'){
+                 angular.element('#homeUrl').trigger('click');
+            }
+            else if($rootScope.rout == 'about'){
+                angular.element('#aboutUrl').trigger('click');
+            }else if($rootScope.rout == 'products'){
+                angular.element('#productUrl').trigger('click');
+            }else{
+                angular.element('#serviceUrl').trigger('click');
+            }
+        }
+
     }, 2500);
 
 });
@@ -27,10 +40,17 @@ app.controller('portfolioCtrl', function($scope,$timeout){
     }, 1000);
 
 });
-app.controller('jobCtrl', function($scope,$timeout){
+app.controller('jobCtrl', function($scope,$timeout,$rootScope){
     $scope.loader = true;
     $timeout(function() {
         $scope.loader = false;
+        if($rootScope.rout == 'team')
+        {
+            angular.element('#teamUrl').trigger('click');
+        }else{
+            angular.element('#careerUrl').trigger('click');
+        }
+        
     }, 1000);
 
 });
@@ -61,13 +81,28 @@ app.controller('syncCtrl', function($scope,$timeout){
 
 
 
-app.controller('menuCntrl', function($scope, $document,$stateParams,$state,$rootScope){
+app.controller('menuCntrl', function($scope, $document,$stateParams,$state,$rootScope,$location){
     $scope.menu_cntrl = function(data){
-        if(data == 'team' || data == 'job' ){
-            $state.go('jobs');
+
+        if($location.path() == '/home'){
+            if(data == 'team' || data == 'job' ){
+                $state.go('jobs');
+            }else{
+                $state.go('home');
+            }
         }else{
-            $state.go('home');
+            if(data == 'team' || data == 'job' ){
+                $state.go('jobs');
+            }else if(data == 'portfolio'){
+                $state.go('portfolio');
+            }
+            else{
+                $state.go('home');
+            }
         }
+
+
+        
     	$rootScope.rout = data;
     }
 });

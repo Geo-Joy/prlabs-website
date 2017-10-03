@@ -12,23 +12,23 @@
     		<h3 class="text-center line-space-2x secondary-color margin-top5">If you’re tired of the old advertising methods and want to try something new then, SYNC XPro is made just for you. Spot Your Next Customer, a digital signage medium, equips you with a secure online dashboard, through which each aspect of your campaign can be addressed. It pushes along with the client’s campaign content. This provides the necessary numbers to crunch and give you a post campaign report that indicates an estimate ROI. </h3>
             <div class="row margin-top10" style="z-index: 999999;">
                 <div class="col-md-6">
-                    <div class="prhide" id="prd1">
+                    <div class="prhide-sync" id="prd-sync1">
                         <img src="img/sync/1blue.png" class="sync-prd-img">
                     </div>
-                    <div class="prhide" id="prd2">
+                    <div class="prhide-sync" id="prd-sync2">
                         <img src="img/sync/2blue.png" class="sync-prd-img">
                     </div>
-                    <div class="prhide" id="prd3">
+                    <div class="prhide-sync" id="prd-sync3">
                         <img src="img/sync/3blue.png" class="sync-prd-img">
                     </div>
-                    <div class="prhide" id="prd4">
+                    <div class="prhide-sync" id="prd-sync4">
                         <img src="img/sync/4blue.png" class="sync-prd-img">
                     </div>
                 </div>
                 <div class="col-md-6" >
                     <div class="row margin-top4">
                         <div class="col-md-1 col-xs-2">
-                            <h3 class="secondary-color margin-0 pr-links" rel="prd1"><i class="fa fa-circle" id="icon1" aria-hidden="true"></i></h3>
+                            <h3 class="secondary-color margin-0 pr-links-sync" rel="prd-sync1"><i class="fa fa-sync fa-circle" id="icon-sync1" aria-hidden="true"></i></h3>
                         </div>
                         <div class="col-md-11 col-xs-10">
                             <h3 class="text-left line-space-2x secondary-color margin-0">Seamless control of media</h3>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="row margin-top4">
                         <div class="col-md-1 col-xs-2">
-                            <h3 class="secondary-color margin-0 pr-links" rel="prd2"><i class="fa fa-circle" id="icon2" aria-hidden="true" ></i></h3>
+                            <h3 class="secondary-color margin-0 pr-links-sync" rel="prd-sync2"><i class="fa fa-sync fa-circle" id="icon-sync2" aria-hidden="true" ></i></h3>
                         </div>
                         <div class="col-md-11 col-xs-10">
                             <h3 class="text-left line-space-2x secondary-color margin-0">Reports and analytical data</h3>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="row margin-top4">
                         <div class="col-md-1 col-xs-2">
-                            <h3 class="secondary-color margin-0 pr-links" rel="prd3"><i class="fa fa-circle" id="icon3" aria-hidden="true" ></i></h3>
+                            <h3 class="secondary-color margin-0 pr-links-sync" rel="prd-sync3"><i class="fa fa-sync fa-circle" id="icon-sync3" aria-hidden="true" ></i></h3>
                         </div>
                         <div class="col-md-11 col-xs-10">
                             <h3 class="text-left line-space-2x secondary-color margin-0">Creates a D.A.N</h3>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="row margin-top4">
                         <div class="col-md-1 col-xs-2">
-                            <h3 class="secondary-color margin-0 pr-links" rel="prd4"><i class="fa fa-circle" id="icon4" aria-hidden="true" ></i></h3>
+                            <h3 class="secondary-color margin-0 pr-links-sync" rel="prd-sync4"><i class="fa fa-sync fa-circle" id="icon-sync4" aria-hidden="true" ></i></h3>
                         </div>
                         <div class="col-md-11 col-xs-10">
                             <h3 class="text-left line-space-2x secondary-color margin-0">Real time check and edit</h3>
@@ -71,23 +71,14 @@
 </div>
 
 <script>
-     $('.pr-links').on('click', function(){
+    $('.pr-links-sync').on('click', function(){
         var target = $(this).attr('rel');
-        $("#"+target).show().siblings(".prhide").hide();
-        var icon = $(this).children(".fa").attr("id");
-        $(".fa" ).removeClass( "fa-dot-circle-o" );
+        $("#"+target).show().siblings(".prhide-sync").hide();
+        var icon = $(this).children(".fa-sync").attr("id");
+        $(".fa-sync" ).removeClass( "fa-dot-circle-o" );
         $("#"+icon).addClass( "fa-dot-circle-o" );
     });
-
-    $(document).ready(function(){
-        $(".prhide").hide();
-        $("#prd1").show();
-        $('#icon1').addClass( "fa-dot-circle-o" );
-    });
 </script>
-
-
-
 
 <script type="text/javascript">
     var animation = bodymovin.loadAnimation({

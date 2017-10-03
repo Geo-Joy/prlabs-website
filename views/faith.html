@@ -1,6 +1,3 @@
-<!-- <div ng-show="loader" class="loader">
-    <img src="img/loader.gif" class="loader-img" >
-</div> -->
 <div ng-show="loader" class="loader" id="loader-jason" style="height: 100vh"></div>
 <div ng-hide="loader">
     <nav-directive></nav-directive>
@@ -11,26 +8,26 @@
     	<h3 class="text-center line-space-2x secondary-color margin-top5">An app that allows you to get in touch with your spirituality and connect with your community, Faith is the answer. Faith provides users with the ability to find their preferred parish or church located in their vicinity. </h3>
         <div class="row margin-top5">
             <div class="col-md-6" style="z-index: 999999;">
-                <div class="prhide" id="prd1">
+                <div class="prhide-faith" id="prd-faith1">
                     <img src="img/faith/quotes.png" style="width: 86%;">
                 </div>
-                <div class="prhide" id="prd2">
+                <div class="prhide-faith" id="prd-faith2">
                     <img src="img/faith/clergy.png" style="width: 86%;">
                 </div>
-                <div class="prhide" id="prd3">
+                <div class="prhide-faith" id="prd-faith3">
                     <img src="img/faith/request.png" style="width: 86%;">
                 </div>
-                <div class="prhide" id="prd4">
+                <div class="prhide-faith" id="prd-faith4">
                     <img src="img/faith/radio.png" style="width: 86%;">
                 </div>
-                <div class="prhide" id="prd5">
+                <div class="prhide-faith" id="prd-faith5">
                     <img src="img/faith/timings.png" style="width: 86%;">
                 </div>
             </div>
             <div class="col-md-6" style="z-index: 99999999">
                   <div class="row margin-top4">
                     <div class="col-md-1 col-xs-2">
-                        <h3 class="secondary-color margin-0 pr-links" rel="prd1" ><i class="fa fa-circle" id="icon1" aria-hidden="true"></i></h3>
+                        <h3 class="secondary-color margin-0 pr-links-faith" rel="prd-faith1" ><i class="fa fa-faith fa-circle" id="icon-faith1" aria-hidden="true"></i></h3>
                     </div>
                     <div class="col-md-11 col-xs-10">
                         <h3 class="text-left line-space-2x secondary-color margin-0">Bible Quotes</h3>
@@ -39,7 +36,7 @@
                 </div>
                 <div class="row margin-top4">
                     <div class="col-md-1 col-xs-2">
-                        <h3 class="secondary-color margin-0 pr-links" rel="prd2"><i class="fa fa-circle" id="icon2" aria-hidden="true" ></i></h3>
+                        <h3 class="secondary-color margin-0 pr-links-faith" rel="prd-faith2"><i class="fa fa-faith fa-circle" id="icon-faith2" aria-hidden="true" ></i></h3>
                     </div>
                     <div class="col-md-11 col-xs-10">
                         <h3 class="text-left line-space-2x secondary-color margin-0">Clergy</h3>
@@ -48,7 +45,7 @@
                 </div>
                 <div class="row margin-top4">
                     <div class="col-md-1 col-xs-2">
-                        <h3 class="secondary-color margin-0 pr-links" rel="prd3"><i class="fa fa-circle" id="icon3" aria-hidden="true" ></i></h3>
+                        <h3 class="secondary-color margin-0 pr-links-faith" rel="prd-faith3"><i class="fa fa-faith fa-circle" id="icon-faith3" aria-hidden="true" ></i></h3>
                     </div>
                     <div class="col-md-11 col-xs-10">
                         <h3 class="text-left line-space-2x secondary-color margin-0">Prayer Request</h3>
@@ -57,7 +54,7 @@
                 </div>
                 <div class="row margin-top4">
                     <div class="col-md-1 col-xs-2">
-                        <h3 class="secondary-color margin-0 pr-links" rel="prd4"><i class="fa fa-circle" id="icon4" aria-hidden="true" ></i></h3>
+                        <h3 class="secondary-color margin-0 pr-links-faith" rel="prd-faith4"><i class="fa fa-faith fa-circle" id="icon-faith4" aria-hidden="true" ></i></h3>
                     </div>
                     <div class="col-md-11 col-xs-10">
                         <h3 class="text-left line-space-2x secondary-color margin-0">Devotional Songs</h3>
@@ -66,7 +63,7 @@
                 </div>
                 <div class="row margin-top4">
                     <div class="col-md-1 col-xs-2">
-                        <h3 class="secondary-color margin-0 pr-links" rel="prd5"><i class="fa fa-circle" id="icon5" aria-hidden="true" ></i></h3>
+                        <h3 class="secondary-color margin-0 pr-links-faith" rel="prd-faith5"><i class="fa fa-faith fa-circle" id="icon-faith5" aria-hidden="true" ></i></h3>
                     </div>
                     <div class="col-md-11 col-xs-10">
                         <h3 class="text-left line-space-2x secondary-color margin-0">Church Timings</h3>
@@ -82,18 +79,12 @@
     <footer-directive></footer-directive>
 </div>
 <script>
-     $('.pr-links').on('click', function(){
+     $('.pr-links-faith').on('click', function(){
         var target = $(this).attr('rel');
-        $("#"+target).show().siblings(".prhide").hide();
-        var icon = $(this).children(".fa").attr("id");
-        $(".fa" ).removeClass( "fa-dot-circle-o" );
+        $("#"+target).show().siblings(".prhide-faith").hide();
+        var icon = $(this).children(".fa-faith").attr("id");
+        $(".fa-faith" ).removeClass( "fa-dot-circle-o" );
         $("#"+icon).addClass( "fa-dot-circle-o" );
-    });
-
-    $(document).ready(function(){
-        $(".prhide").hide();
-        $("#prd1").show();
-        $('#icon1').addClass( "fa-dot-circle-o" );
     });
 </script>
 

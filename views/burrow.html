@@ -11,22 +11,22 @@
     		<h3 class="text-center line-space-2x secondary-color margin-top5">Burrow aspires to simplify household problems, provide a better standard of living and solve the problem for landlords and tenants, making Burrow a unified ecosystem. Burrow lets you address the issues effectively and provides hassle free options for landlords to manage multiple buildings, track payments etc. under one roof, which saves time and manual effort; leading to happy tenants. </h3>
     		<div class="row margin-top5">
                 <div class="col-md-6" style="z-index: 999999;">
-                    <div class="prhide" id="prd1">
+                    <div class="prhide-burrow" id="prd-burrow1">
                         <img src="img/burrow/handyman.png" style="width: 86%;">
                     </div>
-                    <div class="prhide" id="prd2">
+                    <div class="prhide-burrow" id="prd-burrow2">
                         <img src="img/burrow/rent.png" style="width: 86%;">
                     </div>
-                    <div class="prhide" id="prd3">
+                    <div class="prhide-burrow" id="prd-burrow3">
                         <img src="img/burrow/notification.png" style="width: 86%;">
                     </div>
-                    <div class="prhide" id="prd4">
+                    <div class="prhide-burrow" id="prd-burrow4">
                         <img src="img/burrow/multiple.png" style="width: 86%;">
                     </div>
-                    <div class="prhide" id="prd5">
+                    <div class="prhide-burrow" id="prd-burrow5">
                         <img src="img/burrow/discover.png" style="width: 86%;">
                     </div>
-                    <div class="prhide" id="prd6">
+                    <div class="prhide-burrow" id="prd-burrow6">
                         <img src="img/burrow/search.png" style="width: 86%;">
                     </div>
                     
@@ -34,7 +34,7 @@
                 <div class="col-md-6" style="z-index: 999999;">
                     <div class="row margin-top4">
                         <div class="col-md-1 col-xs-2">
-                            <h3 class="secondary-color margin-0 pr-links" rel="prd1" ><i class="fa fa-circle" id="icon1" aria-hidden="true"></i></h3>
+                            <h3 class="secondary-color margin-0 pr-links-burrow" rel="prd-burrow1" ><i class="fa fa-burrow fa-circle" id="icon-burrow1" aria-hidden="true"></i></h3>
                         </div>
                         <div class="col-md-11 col-xs-10">
                             <h3 class="text-left line-space-2x secondary-color margin-0">Handiman Services</h3>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="row margin-top4">
                         <div class="col-md-1 col-xs-2">
-                            <h3 class="secondary-color margin-0 pr-links" rel="prd2"><i class="fa fa-circle" id="icon2" aria-hidden="true" ></i></h3>
+                            <h3 class="secondary-color margin-0 pr-links-burrow" rel="prd-burrow2"><i class="fa fa-burrow fa-circle" id="icon-burrow2" aria-hidden="true" ></i></h3>
                         </div>
                         <div class="col-md-11 col-xs-10">
                             <h3 class="text-left line-space-2x secondary-color margin-0">Rent Overview</h3>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="row margin-top4">
                         <div class="col-md-1 col-xs-2">
-                            <h3 class="secondary-color margin-0 pr-links" rel="prd3"><i class="fa fa-circle" id="icon3" aria-hidden="true" ></i></h3>
+                            <h3 class="secondary-color margin-0 pr-links-burrow" rel="prd-burrow3"><i class="fa fa-burrow fa-circle" id="icon-burrow3" aria-hidden="true" ></i></h3>
                         </div>
                         <div class="col-md-11 col-xs-10">
                             <h3 class="text-left line-space-2x secondary-color margin-0">Instant Notification </h3>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="row margin-top4">
                         <div class="col-md-1 col-xs-2">
-                            <h3 class="secondary-color margin-0 pr-links" rel="prd4"><i class="fa fa-circle" id="icon4" aria-hidden="true" ></i></h3>
+                            <h3 class="secondary-color margin-0 pr-links-burrow" rel="prd-burrow4"><i class="fa fa-burrow fa-circle" id="icon-burrow4" aria-hidden="true" ></i></h3>
                         </div>
                         <div class="col-md-11 col-xs-10">
                             <h3 class="text-left line-space-2x secondary-color margin-0">Manage Multiple Properties</h3>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="row margin-top4">
                         <div class="col-md-1 col-xs-2">
-                            <h3 class="secondary-color margin-0 pr-links" rel="prd5"><i class="fa fa-circle" id="icon5" aria-hidden="true" ></i></h3>
+                            <h3 class="secondary-color margin-0 pr-links-burrow" rel="prd-burrow5"><i class="fa fa-burrow fa-circle" id="icon-burrow5" aria-hidden="true" ></i></h3>
                         </div>
                         <div class="col-md-11 col-xs-10">
                             <h3 class="text-left line-space-2x secondary-color margin-0">Explore and Discover</h3>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="row margin-top4">
                         <div class="col-md-1 col-xs-2">
-                            <h3 class="secondary-color margin-0 pr-links" rel="prd6"><i class="fa fa-circle" id="icon6" aria-hidden="true" ></i></h3>
+                            <h3 class="secondary-color margin-0 pr-links-burrow" rel="prd-burrow6"><i class="fa fa-burrow fa-circle" id="icon-burrow6" aria-hidden="true" ></i></h3>
                         </div>
                         <div class="col-md-11 col-xs-10">
                             <h3 class="text-left line-space-2x secondary-color margin-0">Search and Add</h3>
@@ -95,18 +95,12 @@
     <footer-directive></footer-directive>
 </div>
 <script>
-    $('.pr-links').on('click', function(){
+    $('.pr-links-burrow').on('click', function(){
         var target = $(this).attr('rel');
-        $("#"+target).show().siblings(".prhide").hide();
-        var icon = $(this).children(".fa").attr("id");
-        $(".fa" ).removeClass( "fa-dot-circle-o" );
+        $("#"+target).show().siblings(".prhide-burrow").hide();
+        var icon = $(this).children(".fa-burrow").attr("id");
+        $(".fa-burrow" ).removeClass( "fa-dot-circle-o" );
         $("#"+icon).addClass( "fa-dot-circle-o" );
-    });
-
-    $(document).ready(function(){
-        $(".prhide").hide();
-        $("#prd1").show();
-        $('#icon1').addClass( "fa-dot-circle-o" );
     });
 </script>
 
